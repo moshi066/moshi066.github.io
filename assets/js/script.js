@@ -78,7 +78,15 @@ document.addEventListener('DOMContentLoaded', function() {
 
     if (mobileMenuToggle && mobileMenu) {
         mobileMenuToggle.addEventListener('click', () => {
-            mobileMenu.classList.toggle('hidden');
+            mobileMenu.classList.toggle('open');
+            const icon = mobileMenuToggle.querySelector('i');
+            if (mobileMenu.classList.contains('open')) {
+                icon.classList.remove('fa-bars');
+                icon.classList.add('fa-times');
+            } else {
+                icon.classList.remove('fa-times');
+                icon.classList.add('fa-bars');
+            }
         });
     }
 
@@ -92,7 +100,12 @@ document.addEventListener('DOMContentLoaded', function() {
                     block: 'start'
                 });
             }
-            if (mobileMenu) mobileMenu.classList.add('hidden');
+            if (mobileMenu) {
+                mobileMenu.classList.remove('open');
+                const icon = mobileMenuToggle.querySelector('i');
+                icon.classList.remove('fa-times');
+                icon.classList.add('fa-bars');
+            }
         });
     });
 

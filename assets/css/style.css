@@ -97,6 +97,10 @@ nav a.active::after {
     font-weight: 600;
 }
 
+#mobile-menu a.active::after {
+    display: none;
+}
+
 .achievement-card {
     animation: slideInLeft 0.6s ease-out;
 }
@@ -134,6 +138,28 @@ nav a.active::after {
 .contest-item:hover {
     transform: translateX(8px);
     background: linear-gradient(90deg, rgba(124, 58, 237, 0.1) 0%, rgba(0, 255, 136, 0.1) 100%);
+}
+
+.contest-item a {
+    word-break: break-word;
+    overflow-wrap: break-word;
+}
+
+.achievements-content .space-y-2 > div {
+    word-break: break-word;
+    overflow-wrap: break-word;
+}
+
+#mobile-menu {
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    transition: all 0.3s ease;
+}
+
+#mobile-menu.open {
+    max-height: 500px;
+    opacity: 1;
 }
 
 .education-card {
@@ -301,7 +327,7 @@ nav a.active::after {
 }
 
 .achievements-content.achievements-expanded {
-    max-height: 2000px;
+    max-height: 4000px;
     opacity: 1;
     transform: translateY(0);
 }
