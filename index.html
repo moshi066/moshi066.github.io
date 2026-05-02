@@ -1,781 +1,791 @@
 <!DOCTYPE html>
-<html lang="en" class="scroll-smooth">
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Md Moshiur Rahman - Software Engineer</title>
-    <meta name="description" content="Portfolio of Md Moshiur Rahman, Software Engineer specializing in .NET, Go, Laravel, React Native, and more.">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=JetBrains+Mono:wght@300;400;500;700&display=swap" rel="stylesheet">
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="assets/css/style.css">
-    <script>
-        tailwind.config = {
-            darkMode: 'class',
-            theme: {
-                extend: {
-                    fontFamily: {
-                        sans: ['Poppins', 'sans-serif'],
-                        mono: ['JetBrains Mono', 'monospace'],
-                    },
-                    colors: {
-                        primary: '#0f172a',
-                        secondary: '#7c3aed',
-                        accent: '#1e293b',
-                        darkbg: '#0a0a0a',
-                        neon: '#00ff88',
-                        neonPurple: '#a855f7',
-                        neonBlue: '#3b82f6',
-                    },
-                    animation: {
-                        'float': 'float 6s ease-in-out infinite',
-                        'glow': 'glow 2s ease-in-out infinite alternate',
-                        'fade-in': 'fadeIn 1s ease-in-out',
-                        'slide-up': 'slideUp 0.8s ease-out',
-                        'bounce-in': 'bounceIn 1s ease-out',
-                        'type': 'type 3s steps(40, end)',
-                        'pulse-neon': 'pulseNeon 2s ease-in-out infinite',
-                        'matrix': 'matrix 10s linear infinite',
-                    },
-                    keyframes: {
-                        float: {
-                            '0%, 100%': { transform: 'translateY(0px)' },
-                            '50%': { transform: 'translateY(-10px)' },
-                        },
-                        glow: {
-                            '0%': { boxShadow: '0 0 5px rgba(124, 58, 237, 0.5)' },
-                            '100%': { boxShadow: '0 0 20px rgba(124, 58, 237, 0.8), 0 0 30px rgba(124, 58, 237, 0.4)' },
-                        },
-                        fadeIn: {
-                            '0%': { opacity: '0', transform: 'translateY(20px)' },
-                            '100%': { opacity: '1', transform: 'translateY(0)' },
-                        },
-                        slideUp: {
-                            '0%': { transform: 'translateY(50px)', opacity: '0' },
-                            '100%': { transform: 'translateY(0)', opacity: '1' },
-                        },
-                        bounceIn: {
-                            '0%': { transform: 'scale(0.3)', opacity: '0' },
-                            '50%': { transform: 'scale(1.05)' },
-                            '70%': { transform: 'scale(0.9)' },
-                            '100%': { transform: 'scale(1)', opacity: '1' },
-                        },
-                        type: {
-                            'from': { width: '0' },
-                            'to': { width: '100%' },
-                        },
-                        pulseNeon: {
-                            '0%, 100%': { boxShadow: '0 0 5px rgba(0, 255, 136, 0.5)' },
-                            '50%': { boxShadow: '0 0 20px rgba(0, 255, 136, 0.8), 0 0 30px rgba(0, 255, 136, 0.4)' },
-                        },
-                        matrix: {
-                            '0%': { transform: 'translateY(100%)' },
-                            '100%': { transform: 'translateY(-100%)' },
-                        },
-                    },
-                }
-            }
-        }
-    </script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Moshiur Rahman | Backend Engineer</title>
+  <meta name="description" content="Senior Backend Engineer specializing in .NET, Go, Laravel. Codeforces Expert with 1900+ problems solved.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="assets/css/style.css">
 </head>
-<body class="bg-darkbg text-gray-100 transition-colors duration-300">
-        <nav class="fixed top-0 w-full bg-darkbg shadow-lg z-50 transition-colors duration-300">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex justify-between items-center py-4">
-                <div class="text-xl font-bold text-neon">Md Moshiur Rahman</div>
-                <div class="hidden md:flex space-x-8">
-                    <a href="#hero" class="hover:text-neon transition-colors active:text-neon active:font-semibold">Home</a>
-                    <a href="#about" class="hover:text-neon transition-colors active:text-neon active:font-semibold">About</a>
-                    <a href="#experience" class="hover:text-neon transition-colors active:text-neon active:font-semibold">Experience</a>
-                    <a href="#projects" class="hover:text-neon transition-colors active:text-neon active:font-semibold">Projects</a>
-                    <a href="#skills" class="hover:text-neon transition-colors active:text-neon active:font-semibold">Skills</a>
-                    <a href="#achievements" class="hover:text-neon transition-colors active:text-neon active:font-semibold">Achievements</a>
-                    <a href="#education" class="hover:text-neon transition-colors active:text-neon active:font-semibold">Education</a>
-                    <a href="#contact" class="hover:text-neon transition-colors active:text-neon active:font-semibold">Contact</a>
-                </div>
-                <div class="md:hidden">
-                    <button id="mobile-menu-toggle" class="p-2 text-neon">
-                        <i class="fas fa-bars"></i>
-                    </button>
-                </div>
-            </div>
-            <div id="mobile-menu" class="md:hidden pb-4">
-                <a href="#hero" class="block py-2 hover:text-neon active:text-neon active:font-semibold">Home</a>
-                <a href="#about" class="block py-2 hover:text-neon active:text-neon active:font-semibold">About</a>
-                <a href="#experience" class="block py-2 hover:text-neon active:text-neon active:font-semibold">Experience</a>
-                <a href="#projects" class="block py-2 hover:text-neon active:text-neon active:font-semibold">Projects</a>
-                <a href="#skills" class="block py-2 hover:text-neon active:text-neon active:font-semibold">Skills</a>
-                <a href="#achievements" class="block py-2 hover:text-neon active:text-neon active:font-semibold">Achievements</a>
-                <a href="#education" class="block py-2 hover:text-neon active:text-neon active:font-semibold">Education</a>
-                <a href="#contact" class="block py-2 hover:text-neon active:text-neon active:font-semibold">Contact</a>
-            </div>
+<body>
+  <!-- Cursor follower -->
+  <div class="cursor-dot" data-cursor-dot></div>
+  <div class="cursor-outline" data-cursor-outline></div>
+
+  <!-- Navigation -->
+  <nav class="nav">
+    <div class="nav-container">
+      <a href="#home" class="nav-logo">
+        <span class="logo-bracket">&lt;</span>
+        <span class="logo-text">MR</span>
+        <span class="logo-bracket">/&gt;</span>
+      </a>
+      <div class="nav-menu" id="navMenu">
+        <a href="#home" class="nav-link">Home</a>
+        <a href="#about" class="nav-link">About</a>
+        <a href="#experience" class="nav-link">Experience</a>
+        <a href="#projects" class="nav-link">Projects</a>
+        <a href="#skills" class="nav-link">Skills</a>
+        <a href="#competitive-programming" class="nav-link">CP</a>
+        <a href="#contact" class="nav-link">Contact</a>
+      </div>
+      <button class="nav-toggle" id="navToggle">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section id="home" class="hero">
+    <div class="hero-bg">
+      <div class="grid-overlay"></div>
+      <canvas id="particleCanvas"></canvas>
+    </div>
+    <div class="hero-container">
+      <div class="hero-content">
+        <div class="hero-badge">
+          <span class="pulse-dot"></span>
+          <span>Available for opportunities</span>
         </div>
-    </nav>
+        <h1 class="hero-title">
+          <span class="title-line">Hi, I'm</span>
+          <span class="title-name">Moshiur Rahman</span>
+        </h1>
+        <div class="hero-subtitle">
+          <span class="typing-text" id="typingText"></span>
+          <span class="cursor-blink">|</span>
+        </div>
+        <p class="hero-description">
+          Senior Backend Engineer building scalable systems with <span class="highlight">.NET</span>, 
+          <span class="highlight">Go</span>, and <span class="highlight">Laravel</span>. 
+          Codeforces <span style="color: #0a7aff; font-weight: 600;">Expert</span>. 1900+ problems solved.
+        </p>
+        <div class="hero-cta">
+          <a href="#contact" class="btn btn-primary">
+            <span>Let's Talk</span>
+            <i class="fas fa-arrow-right"></i>
+          </a>
+          <a href="assets/Resume_of_Md_Moshiur_Rahman.pdf" class="btn btn-secondary" download>
+            <i class="fas fa-download"></i>
+            <span>Resume</span>
+          </a>
+        </div>
+        <div class="hero-stats">
+          <div class="stat-item">
+            <div class="stat-number" data-target="5">0</div>
+            <div class="stat-label">Years Exp</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-number">API</div>
+            <div class="stat-label">Architect</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-number">System</div>
+            <div class="stat-label">Designer</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-number" data-target="1900">0</div>
+            <div class="stat-label">Problems Solved</div>
+          </div>
+        </div>
+      </div>
+      <div class="hero-visual">
+        <div class="floating-card card-1">
+          <i class="fab fa-golang"></i>
+          <span>Go</span>
+        </div>
+        <div class="floating-card card-2">
+          <i class="fab fa-microsoft"></i>
+          <span>.NET</span>
+        </div>
+        <div class="floating-card card-3">
+          <i class="fab fa-laravel"></i>
+          <span>Laravel</span>
+        </div>
+        <div class="floating-card card-4">
+          <i class="fab fa-aws"></i>
+          <span>AWS</span>
+        </div>
+        <div class="floating-card card-5">
+          <i class="fas fa-database"></i>
+          <span>PostgreSQL</span>
+        </div>
+        <div class="floating-card card-6">
+          <i class="fab fa-docker"></i>
+          <span>Docker</span>
+        </div>
+      </div>
+    </div>
+    <div class="scroll-indicator">
+      <div class="mouse">
+        <div class="wheel"></div>
+      </div>
+      <span>Scroll Down</span>
+    </div>
+  </section>
 
-    <section id="hero" class="min-h-screen flex items-center justify-center bg-gradient-to-br from-darkbg via-primary to-secondary text-white relative overflow-hidden">
-        <canvas id="hero-canvas" class="absolute inset-0 z-0"></canvas>
-        <div class="absolute inset-0 bg-black/40"></div>
+  <!-- About Section -->
+  <section id="about" class="about">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">// About Me</span>
+        <h2 class="section-title">Who I Am</h2>
+      </div>
+      <div class="about-grid">
+        <div class="about-content">
+          <p class="about-text">
+            <span class="text-gradient">Senior Backend Engineer</span> with 5+ years building systems that scale. Competitive programming background (1900+ problems) taught me to think in algorithms and optimize ruthlessly.
+          </p>
+          <p class="about-text">
+            Work primarily with <strong>.NET Core</strong>, <strong>Go</strong>, and <strong>Laravel</strong>. Recently architected <strong>Texera</strong>, a multi-tenant ERP handling garment manufacturing workflows with 29 modules, 200+ endpoints, running on AWS.
+          </p>
+          <p class="about-text">
+            Love solving performance bottlenecks, designing clean APIs, and helping teams write better code. Always down for system design discussions and code reviews.
+          </p>
+          <div class="about-highlights">
+            <div class="highlight-item">
+              <i class="fas fa-trophy"></i>
+              <div>
+                <h4>Codeforces Expert</h4>
+                <p>Peak: 1864</p>
+              </div>
+            </div>
+            <div class="highlight-item">
+              <i class="fas fa-code"></i>
+              <div>
+                <h4>Problem Solver</h4>
+                <p>1900+ Solved</p>
+              </div>
+            </div>
+            <div class="highlight-item">
+              <i class="fas fa-bolt"></i>
+              <div>
+                <h4>Performance Geek</h4>
+                <p>75% Latency Cut</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="about-visual">
+          <div class="glass-card">
+            <div class="card-header">
+              <div class="card-dots">
+                <span></span>
+                <span></span>
+                <span></span>
+              </div>
+              <span class="card-title">profile.json</span>
+            </div>
+            <div class="card-body">
+              <pre><code>{
+  <span class="key">"name"</span>: <span class="string">"Md Moshiur Rahman"</span>,
+  <span class="key">"role"</span>: <span class="string">"Senior Backend Engineer"</span>,
+  <span class="key">"location"</span>: <span class="string">"Dhaka, Bangladesh"</span>,
+  <span class="key">"experience"</span>: <span class="number">5</span>,
+  <span class="key">"languages"</span>: [
+    <span class="string">"C#"</span>,
+    <span class="string">"Go"</span>,
+    <span class="string">"PHP"</span>,
+    <span class="string">"C++"</span>,
+    <span class="string">"TypeScript"</span>,
+    <span class="string">"React"</span>
+  ],
+  <span class="key">"focus"</span>: [
+    <span class="string">"Backend Architecture"</span>,
+    <span class="string">"API Design"</span>,
+    <span class="string">"Performance Optimization"</span>,
+    <span class="string">"System Design"</span>
+  ],
+  <span class="key">"available"</span>: <span class="boolean">true</span>
+}</code></pre>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
-        <div class="absolute top-20 left-10 text-neon text-6xl opacity-20 animate-float" style="animation-delay: 0s; animation: float 6s ease-in-out infinite, rotate 20s linear infinite;">{ }</div>
-        <div class="absolute top-40 right-20 text-neonPurple text-5xl opacity-30 animate-float" style="animation-delay: 1s; animation: float 6s ease-in-out infinite, rotate 25s linear infinite reverse;">< ></div>
-        <div class="absolute bottom-32 left-20 text-neonBlue text-4xl opacity-25 animate-float" style="animation-delay: 2s; animation: float 6s ease-in-out infinite, rotate 30s linear infinite;">[ ]</div>
-        <div class="absolute bottom-20 right-10 text-neon text-7xl opacity-20 animate-float" style="animation-delay: 3s; animation: float 6s ease-in-out infinite, rotate 15s linear infinite reverse;">//</div>
-        <div class="absolute top-1/2 left-1/4 text-neonPurple text-3xl opacity-40 animate-float" style="animation-delay: 4s; animation: float 6s ease-in-out infinite, rotate 35s linear infinite;">&lt;/&gt;</div>
-        <div class="absolute top-1/3 right-1/3 text-neonBlue text-5xl opacity-30 animate-float" style="animation-delay: 5s; animation: float 6s ease-in-out infinite, rotate 40s linear infinite reverse;">{ }</div>
-        <div class="text-center px-4 relative z-10">
-            <h1 class="text-5xl md:text-7xl font-bold mb-4 animate-bounce-in text-white">Md Moshiur Rahman</h1>
-            <h2 class="text-2xl md:text-3xl mb-6 text-neon">Software Engineer</h2>
-            <p id="typed-text" class="text-lg md:text-xl mb-8 max-w-4xl mx-auto overflow-hidden text-gray-200 relative">
-                <span class="typing-cursor">|</span>
+  <!-- Experience Section -->
+  <section id="experience" class="experience">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">// Experience</span>
+        <h2 class="section-title">Where I've Worked</h2>
+      </div>
+      <div class="timeline">
+        <div class="timeline-item">
+          <div class="timeline-marker"></div>
+          <div class="timeline-content">
+            <div class="timeline-header">
+              <div>
+                <h3>Senior Software Engineer</h3>
+                <h4>REEA Digital Limited</h4>
+              </div>
+              <span class="timeline-date">Dec 2022 – Present</span>
+            </div>
+            <div class="timeline-badge">Promoted from Software Engineer (Sep 2023)</div>
+            <ul class="timeline-list">
+              <li>Led backend for <strong>Texera</strong>, a 29-module multi-tenant ERP: 200+ REST endpoints, RBAC, multi-tenant isolation for 5+ clients</li>
+              <li>Built email verification service in <strong>Go</strong>: 8k req/day, 75% P95 latency reduction via worker pools</li>
+              <li>Implemented RBAC and tenant isolation, reducing manual ops by 75%</li>
+              <li>Integrated <strong>Stripe</strong> for subscriptions and in-app purchases (.NET Core)</li>
+              <li>Shipped features across React Native, Qt/QML, Kotlin, SwiftUI, Flutter</li>
+            </ul>
+            <div class="tech-tags">
+              <span>.NET Core</span>
+              <span>Go</span>
+              <span>Laravel</span>
+              <span>AWS EC2, S3, SES, Lambda</span>
+              <span>PostgreSQL</span>
+            </div>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-marker"></div>
+          <div class="timeline-content">
+            <div class="timeline-header">
+              <div>
+                <h3>Software Engineer</h3>
+                <h4>Enosis Solutions</h4>
+              </div>
+              <span class="timeline-date">Apr 2021 – Dec 2022</span>
+            </div>
+            <ul class="timeline-list">
+              <li>Refactored legacy WinForms apps to <strong>WPF/MVVM</strong>: 40% UI latency reduction, 25% memory improvement, fixed 50+ concurrency bugs</li>
+              <li>Optimized .NET desktop app for industrial machinery control: 30% faster command execution via socket optimization</li>
+              <li>Built crash-dump collection tool (C#) for gaming peripherals client</li>
+              <li>R&amp;D: crash analysis tooling, telemetry pipelines</li>
+            </ul>
+            <div class="tech-tags">
+              <span>.NET</span>
+              <span>C#</span>
+              <span>WPF</span>
+              <span>MVVM</span>
+              <span>Socket Programming</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects Section -->
+  <section id="projects" class="projects">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">// Projects</span>
+        <h2 class="section-title">Featured Work</h2>
+      </div>
+      <!-- Texera Featured - Hero Project -->
+      <div style="background: linear-gradient(135deg, rgba(99, 102, 241, 0.15), rgba(236, 72, 153, 0.1)); backdrop-filter: blur(20px); border: 2px solid rgba(99, 102, 241, 0.4); border-radius: 20px; padding: 3rem; position: relative; overflow: hidden; margin-bottom: 3rem; box-shadow: 0 8px 32px rgba(99, 102, 241, 0.3);">
+        <!-- Animated background glow -->
+        <div style="position: absolute; top: -50%; right: -20%; width: 400px; height: 400px; background: radial-gradient(circle, rgba(99, 102, 241, 0.2), transparent 70%); border-radius: 50%; filter: blur(60px);"></div>
+        
+        <div style="position: absolute; top: 1.5rem; right: 1.5rem; background: linear-gradient(135deg, #fbbf24, #f59e0b); color: #000; padding: 0.5rem 1.25rem; border-radius: 8px; font-size: 0.8rem; font-weight: 700; display: flex; align-items: center; gap: 0.5rem; box-shadow: 0 4px 12px rgba(251, 191, 36, 0.4);">
+          <i class="fas fa-star"></i> FEATURED PROJECT
+        </div>
+        
+        <div style="display: grid; grid-template-columns: auto 1fr; gap: 2.5rem; align-items: center; position: relative; z-index: 1;">
+          <div style="width: 100px; height: 100px; background: linear-gradient(135deg, var(--primary), var(--secondary)); border-radius: 20px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; box-shadow: 0 8px 24px rgba(99, 102, 241, 0.4);">
+            <i class="fas fa-industry" style="font-size: 3rem; color: var(--text-primary);"></i>
+          </div>
+          <div>
+            <h3 style="font-size: 2.25rem; color: var(--text-primary); margin-bottom: 0.75rem; font-weight: 700; letter-spacing: -0.02em;">Texera ERP</h3>
+            <p style="color: var(--text-secondary); margin-bottom: 1.5rem; font-size: 1.05rem; line-height: 1.7; max-width: 800px;">
+              Multi-tenant SaaS ERP for garment manufacturers. Led complete backend architecture: 29 modules, 200+ REST endpoints, RBAC, multi-tenant isolation, AWS deployment.
             </p>
-            <div class="space-x-4">
-                <a href="assets/Resume_of_Md_Moshiur_Rahman.pdf" target="_blank" class="bg-neon hover:bg-neon/80 text-black px-6 py-3 rounded-full font-semibold transition-all duration-300 hover:scale-105 hover:shadow-[0_20px_40px_rgba(0,255,136,0.3)] hover:transform hover:-translate-y-2">View Resume</a>
-                <a href="#contact" class="border-2 border-neon hover:bg-neon hover:text-black px-6 py-3 rounded-full font-semibold transition-all duration-300 hover:scale-105 hover:shadow-[0_20px_40px_rgba(0,255,136,0.3)] hover:transform hover:-translate-y-2">Contact Me</a>
+            <div style="display: flex; gap: 3rem; margin-bottom: 1.5rem;">
+              <div>
+                <div style="font-size: 2rem; font-weight: 700; color: var(--primary); font-family: var(--font-mono);">29+</div>
+                <div style="font-size: 0.8rem; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.05em;">Modules</div>
+              </div>
+              <div>
+                <div style="font-size: 2rem; font-weight: 700; color: var(--primary); font-family: var(--font-mono);">200+</div>
+                <div style="font-size: 0.8rem; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.05em;">Endpoints</div>
+              </div>
+              <div>
+                <div style="font-size: 2rem; font-weight: 700; color: var(--primary); font-family: var(--font-mono);">5+</div>
+                <div style="font-size: 0.8rem; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.05em;">Clients</div>
+              </div>
             </div>
+            <div style="display: flex; flex-wrap: wrap; gap: 0.5rem;">
+              <span style="font-family: var(--font-mono); font-size: 0.75rem; padding: 0.375rem 0.875rem; background: rgba(99, 102, 241, 0.2); border: 1px solid rgba(99, 102, 241, 0.4); border-radius: 8px; color: var(--primary-light); font-weight: 600;">.NET Core</span>
+              <span style="font-family: var(--font-mono); font-size: 0.75rem; padding: 0.375rem 0.875rem; background: rgba(99, 102, 241, 0.2); border: 1px solid rgba(99, 102, 241, 0.4); border-radius: 8px; color: var(--primary-light); font-weight: 600;">TypeScript</span>
+              <span style="font-family: var(--font-mono); font-size: 0.75rem; padding: 0.375rem 0.875rem; background: rgba(99, 102, 241, 0.2); border: 1px solid rgba(99, 102, 241, 0.4); border-radius: 8px; color: var(--primary-light); font-weight: 600;">AWS</span>
+              <span style="font-family: var(--font-mono); font-size: 0.75rem; padding: 0.375rem 0.875rem; background: rgba(99, 102, 241, 0.2); border: 1px solid rgba(99, 102, 241, 0.4); border-radius: 8px; color: var(--primary-light); font-weight: 600;">PostgreSQL</span>
+              <span style="font-family: var(--font-mono); font-size: 0.75rem; padding: 0.375rem 0.875rem; background: rgba(99, 102, 241, 0.2); border: 1px solid rgba(99, 102, 241, 0.4); border-radius: 8px; color: var(--primary-light); font-weight: 600;">RBAC</span>
+            </div>
+          </div>
         </div>
-    </section>
-
-    <section id="about" class="py-20 bg-darkbg">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 class="text-3xl font-bold text-center mb-12 text-neon animate-fade-in">About Me</h2>
-            <div class="max-w-4xl mx-auto text-center">
-                <div class="space-y-6 text-base leading-relaxed">
-                    <p class="text-gray-300 animate-fade-in">
-                        I'm a <span class="text-neon font-semibold">Senior Software Engineer</span> with <span class="text-neon font-semibold">4+ years</span> of experience crafting scalable solutions.
-                        My journey began with competitive programming, where I honed my algorithmic thinking and problem-solving skills across <span class="text-neon font-semibold">1900+ problems</span> on platforms like Codeforces and HackerRank.
-                    </p>
-
-                    <p class="text-gray-300 animate-fade-in" style="animation-delay: 0.2s;">
-                        Today, I specialize in <span class="text-neon font-semibold">backend development</span>, <span class="text-neon font-semibold">native and cross-platform mobile apps</span>,
-                        and <span class="text-neon font-semibold">enterprise solutions</span> using .NET, Go, Laravel, Swift, Kotlin, QT/QML, and React Native.
-                        I excel at performance optimization, having optimized database queries in production systems and architecting scalable solutions that handle growing user demands.
-                    </p>
-
-                    <p class="text-gray-300 animate-fade-in" style="animation-delay: 0.4s;">
-                        When I'm not coding, you'll find me tackling algorithmic challenges, exploring emerging technologies, or contributing to the developer community.
-                        I'm always excited to take on innovative projects that push technical boundaries.
-                    </p>
-                </div>
-
-                <div class="mt-12 grid md:grid-cols-3 gap-6">
-                    <div class="glass p-6 rounded-2xl shadow-xl animate-fade-in text-center about-tile">
-                        <div class="text-3xl mb-3">🚀</div>
-                        <h4 class="text-lg font-semibold text-white mb-2">Problem Solver</h4>
-                        <p class="text-gray-400 text-sm">1900+ problems solved across multiple platforms</p>
-                    </div>
-                    <div class="glass p-6 rounded-2xl shadow-xl animate-fade-in text-center about-tile" style="animation-delay: 0.2s;">
-                        <div class="text-3xl mb-3">⚡</div>
-                        <h4 class="text-lg font-semibold text-white mb-2">Performance Expert</h4>
-                        <p class="text-gray-400 text-sm">Optimized systems for speed and scalability</p>
-                    </div>
-                    <div class="glass p-6 rounded-2xl shadow-xl animate-fade-in text-center about-tile" style="animation-delay: 0.4s;">
-                        <div class="text-3xl mb-3">🎯</div>
-                        <h4 class="text-lg font-semibold text-white mb-2">Tech Enthusiast</h4>
-                        <p class="text-gray-400 text-sm">Always learning and exploring new technologies</p>
-                    </div>
-                </div>
+      </div>
+      
+      <!-- Other Projects - 5 Column Grid -->
+      <div style="display: grid; grid-template-columns: repeat(5, 1fr); gap: 1rem;">
+        <!-- Email Verifier -->
+        <div class="project-card">
+          <div class="project-image">
+            <div class="project-overlay">
+              <i class="fas fa-envelope-circle-check"></i>
             </div>
+          </div>
+          <div class="project-content">
+            <h3>Email Verification</h3>
+            <p class="project-description">
+              Optimization with Goroutines, 75% latency cut.
+            </p>
+            <div class="project-tags">
+              <span>Go</span>
+              <span>PostgreSQL</span>
+            </div>
+          </div>
         </div>
-    </section>
 
-    <section id="experience" class="py-20 bg-darkbg relative overflow-hidden">
-
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-            <h2 class="text-4xl font-bold text-center mb-12 text-neon animate-fade-in">Work Experience</h2>
-            <div class="relative">
-                <div class="absolute left-1/2 transform -translate-x-1/2 w-1 h-full bg-gradient-to-b from-neon to-neonPurple hidden md:block"></div>
-                <div class="space-y-12">
-                    <div class="md:flex md:items-center">
-                        <div class="md:w-1/2 md:pr-8 md:text-right">
-                            <div class="glass p-6 rounded-2xl shadow-xl animate-fade-in experience-card">
-                                <h3 class="text-2xl font-semibold text-white mb-2">Senior Software Engineer</h3>
-                                <h4 class="text-lg text-neon mb-2">REEA Digital Limited</h4>
-                                <p class="text-sm text-gray-400 mb-4">December 2022 – Present</p>
-                                <p class="text-xs text-neon/80">Promoted from Software Engineer (Sep 2023)</p>
-                            </div>
-                        </div>
-                        <div class="md:w-1/2 md:pl-8 mt-6 md:mt-0">
-                            <div class="w-4 h-4 bg-neon rounded-full mx-auto md:mx-0 shadow-lg animate-pulse"></div>
-                        </div>
-                    </div>
-                    <div class="md:flex md:items-center md:flex-row-reverse">
-                        <div class="md:w-1/2 md:pl-8">
-                            <div class="glass p-6 rounded-2xl shadow-xl animate-fade-in experience-card">
-                                <h3 class="text-2xl font-semibold text-white mb-2">Software Engineer</h3>
-                                <h4 class="text-lg text-neon mb-2">Enosis Solutions</h4>
-                                <p class="text-sm text-gray-400 mb-4">April 2021 – December 2022</p>
-                            </div>
-                        </div>
-                        <div class="md:w-1/2 md:pr-8 md:text-right mt-6 md:mt-0">
-                            <div class="w-4 h-4 bg-neon rounded-full mx-auto md:mx-0 md:ml-auto shadow-lg animate-pulse"></div>
-                        </div>
-                    </div>
-                </div>
+        <!-- Youmio -->
+        <div class="project-card">
+          <div class="project-image">
+            <div class="project-overlay">
+              <i class="fas fa-gamepad"></i>
             </div>
+          </div>
+          <div class="project-content">
+            <h3>Youmio Gaming</h3>
+            <p class="project-description">
+              Gaming backend with .NET. CMS in Next.js.
+            </p>
+            <div class="project-tags">
+              <span>.NET Core</span>
+              <span>Next.js</span>
+            </div>
+          </div>
         </div>
-    </section>
 
-    <section id="projects" class="py-20 bg-darkbg">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 class="text-4xl font-bold text-center mb-12 text-neon animate-fade-in">Projects</h2>
-            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <div class="glass p-6 rounded-2xl shadow-xl animate-fade-in project-card">
-                    <h3 class="text-xl font-semibold text-white mb-2">Youmio</h3>
-                    <p class="text-gray-300 mb-4">Gaming platform with Stripe integration and CMS</p>
-                    <p class="text-gray-300 text-sm mb-4">A game where I integrated Stripe for real-money payments and subscription management into the backend using .NET. Developed in-game store supporting both real and virtual currency. Built and maintained CMS backend and frontend using Next.js for game content management.</p>
-                    <div class="flex flex-wrap gap-2">
-                        <span class="bg-neon/10 text-neon px-3 py-1 rounded-full text-sm font-mono">Next.js</span>
-                        <span class="bg-neon/10 text-neon px-3 py-1 rounded-full text-sm font-mono">.NET</span>
-                        <span class="bg-neon/10 text-neon px-3 py-1 rounded-full text-sm font-mono">Stripe</span>
-                        <span class="bg-neon/10 text-neon px-3 py-1 rounded-full text-sm font-mono">TypeScript</span>
-                    </div>
-                </div>
-                <div class="glass p-6 rounded-2xl shadow-xl animate-fade-in project-card">
-                    <h3 class="text-xl font-semibold text-white mb-2">Arabic Unlocked</h3>
-                    <p class="text-gray-300 mb-4">Duolingo-like Arabic learning app</p>
-                    <p class="text-gray-300 text-sm mb-4">A Duolingo-like app to learn Arabic. Developed with React Native, Expo, and TypeScript. Implemented various types of lesson functionalities including interactive exercises, progress tracking, and adaptive learning features.</p>
-                    <div class="flex flex-wrap gap-2">
-                        <span class="bg-neon/10 text-neon px-3 py-1 rounded-full text-sm font-mono">React Native</span>
-                        <span class="bg-neon/10 text-neon px-3 py-1 rounded-full text-sm font-mono">Expo</span>
-                        <span class="bg-neon/10 text-neon px-3 py-1 rounded-full text-sm font-mono">TypeScript</span>
-                    </div>
-                </div>
-                <div class="glass p-6 rounded-2xl shadow-xl animate-fade-in project-card">
-                    <h3 class="text-xl font-semibold text-white mb-2">Educube</h3>
-                    <p class="text-gray-300 mb-4">Business management tool with API integrations</p>
-                    <p class="text-gray-300 text-sm mb-4">Implemented Dropbox integration for seamless file management using Laravel. Integrated Xero for automating invoice management. Extended CMS back-end with new features to improve usability and functionality.</p>
-                    <div class="flex flex-wrap gap-2">
-                        <span class="bg-neon/10 text-neon px-3 py-1 rounded-full text-sm font-mono">Laravel</span>
-                        <span class="bg-neon/10 text-neon px-3 py-1 rounded-full text-sm font-mono">Dropbox</span>
-                        <span class="bg-neon/10 text-neon px-3 py-1 rounded-full text-sm font-mono">Xero</span>
-                    </div>
-                </div>
-                <div class="glass p-6 rounded-2xl shadow-xl animate-fade-in project-card">
-                    <h3 class="text-xl font-semibold text-white mb-2">Email Verifier</h3>
-                    <p class="text-gray-300 mb-4">Scalable email verification service in Go</p>
-                    <p class="text-gray-300 text-sm mb-4">Developed a scalable back-end service in Go, implementing robust role management and authorization to secure user access and data integrity. Optimized several key database queries, resulting in significant performance improvements and faster response times for email verification. Designed and implemented a parallelization strategy for a long-running background process, reducing the processing time by 75% and significantly improving the efficiency of the system.</p>
-                    <div class="flex flex-wrap gap-2">
-                        <span class="bg-neon/10 text-neon px-3 py-1 rounded-full text-sm font-mono">Go</span>
-                        <span class="bg-neon/10 text-neon px-3 py-1 rounded-full text-sm font-mono">PostgreSQL</span>
-                        <span class="bg-neon/10 text-neon px-3 py-1 rounded-full text-sm font-mono">Docker</span>
-                    </div>
-                </div>
-                <div class="glass p-6 rounded-2xl shadow-xl animate-fade-in project-card">
-                    <h3 class="text-xl font-semibold text-white mb-2">Pow Pow</h3>
-                    <p class="text-gray-300 mb-4">QR code-based food ordering and payment system</p>
-                    <p class="text-gray-300 text-sm mb-4">Built a cross-platform QR code-based mobile application for food ordering and payment system using Qt/QML and C++. Developed features for menu ordering, bill payment, order acceptance/rejection, and bill splitting. Solved the challenge of splitting bills among multiple diners sharing the same QR code.</p>
-                    <div class="flex flex-wrap gap-2">
-                        <span class="bg-neon/10 text-neon px-3 py-1 rounded-full text-sm font-mono">Qt/QML</span>
-                        <span class="bg-neon/10 text-neon px-3 py-1 rounded-full text-sm font-mono">C++</span>
-                    </div>
-                </div>
-                <div class="glass p-6 rounded-2xl shadow-xl animate-fade-in project-card">
-                    <h3 class="text-xl font-semibold text-white mb-2">Infonet POS</h3>
-                    <p class="text-gray-300 mb-4">POS system for gas station machines</p>
-                    <p class="text-gray-300 text-sm mb-4">Developed POS features for gas station machines, supporting money or gas-based purchases. Added new modules to the cross-platform (Android & UWP) app using Xamarin. Enhanced desktop reporting and pump management application using .NET and WPF.</p>
-                    <div class="flex flex-wrap gap-2">
-                        <span class="bg-neon/10 text-neon px-3 py-1 rounded-full text-sm font-mono">Xamarin</span>
-                        <span class="bg-neon/10 text-neon px-3 py-1 rounded-full text-sm font-mono">.NET</span>
-                        <span class="bg-neon/10 text-neon px-3 py-1 rounded-full text-sm font-mono">WPF</span>
-                    </div>
-                </div>
-                <div class="glass p-6 rounded-2xl shadow-xl animate-fade-in project-card">
-                    <h3 class="text-xl font-semibold text-white mb-2">Cianflone Scientific</h3>
-                    <p class="text-gray-300 mb-4">Heavy machinery control system with socket connections</p>
-                    <p class="text-gray-300 text-sm mb-4">Updated features in a .NET desktop application controlling heavy machinery via socket connections. Revamped UI components using WinForm for a modernized look and improved usability.</p>
-                    <div class="flex flex-wrap gap-2">
-                        <span class="bg-neon/10 text-neon px-3 py-1 rounded-full text-sm font-mono">.NET</span>
-                        <span class="bg-neon/10 text-neon px-3 py-1 rounded-full text-sm font-mono">WinForms</span>
-                        <span class="bg-neon/10 text-neon px-3 py-1 rounded-full text-sm font-mono">SQL Server</span>
-                    </div>
-                </div>
-                <div class="glass p-6 rounded-2xl shadow-xl animate-fade-in project-card" style="opacity: 0.7;">
-                    <h3 class="text-xl font-semibold text-white mb-2">Others</h3>
-                    <p class="text-gray-300 mb-4 italic">A collection of professional projects and enterprise solutions</p>
-                    <p class="text-gray-300 text-sm mb-4">Enterprise software development with .NET, Go, Laravel, Xamarin, WPF, and cross-platform mobile apps. Led backend services, desktop applications, and R&D initiatives at REEA Digital Limited and Enosis Solutions.</p>
-                    <div class="flex flex-wrap gap-2">
-                        <span class="bg-neon/10 text-neon px-3 py-1 rounded-full text-sm font-mono">.NET</span>
-                        <span class="bg-neon/10 text-neon px-3 py-1 rounded-full text-sm font-mono">Go</span>
-                        <span class="bg-neon/10 text-neon px-3 py-1 rounded-full text-sm font-mono">Laravel</span>
-                        <span class="bg-neon/10 text-neon px-3 py-1 rounded-full text-sm font-mono">Xamarin</span>
-                        <span class="bg-neon/10 text-neon px-3 py-1 rounded-full text-sm font-mono">WPF</span>
-                        <span class="bg-neon/10 text-neon px-3 py-1 rounded-full text-sm font-mono">React Native</span>
-                        <span class="bg-neon/10 text-neon px-3 py-1 rounded-full text-sm font-mono">Flutter</span>
-                        <span class="bg-neon/10 text-neon px-3 py-1 rounded-full text-sm font-mono">Kotlin</span>
-                        <span class="bg-neon/10 text-neon px-3 py-1 rounded-full text-sm font-mono">Swift</span>
-                    </div>
-                </div>
+        <!-- Arabic Unlocked -->
+        <div class="project-card">
+          <div class="project-image">
+            <div class="project-overlay">
+              <i class="fas fa-language"></i>
             </div>
+          </div>
+          <div class="project-content">
+            <h3>Arabic Unlocked</h3>
+            <p class="project-description">
+              Language learning app. Interactive lessons.
+            </p>
+            <div class="project-tags">
+              <span>React Native</span>
+              <span>Expo</span>
+            </div>
+          </div>
         </div>
-    </section>
 
-    <section id="skills" class="py-20 bg-darkbg relative overflow-hidden">
-
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-            <h2 class="text-4xl font-bold text-center mb-12 text-neon animate-fade-in">Skills</h2>
-            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <div class="text-center glass p-6 rounded-2xl shadow-xl animate-fade-in skill-card">
-                    <i class="fas fa-code text-neon text-4xl mb-4"></i>
-                    <h3 class="text-xl font-semibold text-white mb-4">Programming</h3>
-                    <div class="flex flex-wrap gap-2 justify-center">
-                        <span class="bg-neon/10 text-neon px-3 py-1 rounded-full text-sm font-mono">C#</span>
-                        <span class="bg-neon/10 text-neon px-3 py-1 rounded-full text-sm font-mono">.NET</span>
-                        <span class="bg-neon/10 text-neon px-3 py-1 rounded-full text-sm font-mono">Go</span>
-                        <span class="bg-neon/10 text-neon px-3 py-1 rounded-full text-sm font-mono">Laravel</span>
-                        <span class="bg-neon/10 text-neon px-3 py-1 rounded-full text-sm font-mono">C/C++</span>
-                        <span class="bg-neon/10 text-neon px-3 py-1 rounded-full text-sm font-mono">Qt/QML</span>
-                        <span class="bg-neon/10 text-neon px-3 py-1 rounded-full text-sm font-mono">SwiftUI</span>
-                        <span class="bg-neon/10 text-neon px-3 py-1 rounded-full text-sm font-mono">React Native</span>
-                        <span class="bg-neon/10 text-neon px-3 py-1 rounded-full text-sm font-mono">TypeScript</span>
-                        <span class="bg-neon/10 text-neon px-3 py-1 rounded-full text-sm font-mono">WPF</span>
-                        <span class="bg-neon/10 text-neon px-3 py-1 rounded-full text-sm font-mono">WinForms</span>
-                    </div>
-                </div>
-                <div class="text-center glass p-6 rounded-2xl shadow-xl animate-fade-in skill-card" style="animation-delay: 0.1s;">
-                    <i class="fas fa-database text-neon text-4xl mb-4"></i>
-                    <h3 class="text-xl font-semibold text-white mb-4">Databases</h3>
-                    <div class="flex flex-wrap gap-2 justify-center">
-                        <span class="bg-neon/10 text-neon px-3 py-1 rounded-full text-sm font-mono">MS SQL Server</span>
-                        <span class="bg-neon/10 text-neon px-3 py-1 rounded-full text-sm font-mono">MySQL</span>
-                        <span class="bg-neon/10 text-neon px-3 py-1 rounded-full text-sm font-mono">PostgreSQL</span>
-                    </div>
-                </div>
-                <div class="text-center glass p-6 rounded-2xl shadow-xl animate-fade-in skill-card" style="animation-delay: 0.2s;">
-                    <i class="fas fa-cloud text-neon text-4xl mb-4"></i>
-                    <h3 class="text-xl font-semibold text-white mb-4">Cloud & APIs</h3>
-                    <div class="flex flex-wrap gap-2 justify-center">
-                        <span class="bg-neon/10 text-neon px-3 py-1 rounded-full text-sm font-mono">AWS</span>
-                        <span class="bg-neon/10 text-neon px-3 py-1 rounded-full text-sm font-mono">Stripe</span>
-                        <span class="bg-neon/10 text-neon px-3 py-1 rounded-full text-sm font-mono">Dropbox</span>
-                        <span class="bg-neon/10 text-neon px-3 py-1 rounded-full text-sm font-mono">Xero</span>
-                    </div>
-                </div>
+        <!-- Educube -->
+        <div class="project-card">
+          <div class="project-image">
+            <div class="project-overlay">
+              <i class="fas fa-graduation-cap"></i>
             </div>
+          </div>
+          <div class="project-content">
+            <h3>Educube</h3>
+            <p class="project-description">
+              Business tool with Dropbox and Xero APIs.
+            </p>
+            <div class="project-tags">
+              <span>Laravel</span>
+              <span>PHP</span>
+            </div>
+          </div>
         </div>
-    </section>
 
-    <section id="achievements" class="py-20 bg-darkbg relative overflow-hidden">
-
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-            <div class="text-center mb-16">
-                <h2 class="text-4xl font-bold mb-4 text-neon animate-fade-in">Competitive Programming Achievements</h2>
+        <!-- Pow Pow -->
+        <div class="project-card">
+          <div class="project-image">
+            <div class="project-overlay">
+              <i class="fas fa-qrcode"></i>
             </div>
-
-            <div class="grid grid-cols-2 md:grid-cols-4 gap-6 mb-12">
-                <div class="glass p-6 rounded-2xl shadow-xl text-center animate-fade-in stat-card">
-                    <div class="text-3xl mb-2">🏅</div>
-                    <div class="text-2xl font-bold text-neon">8+</div>
-                    <div class="text-sm text-gray-400">Top 20 Ranks</div>
-                </div>
-                <div class="glass p-6 rounded-2xl shadow-xl text-center animate-fade-in stat-card" style="animation-delay: 0.1s;">
-                    <div class="text-3xl mb-2">💻</div>
-                    <div class="text-2xl font-bold text-neonPurple">1900+</div>
-                    <div class="text-sm text-gray-400">Problems Solved</div>
-                </div>
-                <div class="glass p-6 rounded-2xl shadow-xl text-center animate-fade-in stat-card" style="animation-delay: 0.2s;">
-                    <div class="text-3xl mb-2">⭐</div>
-                    <div class="text-2xl font-bold text-neonBlue">1864</div>
-                    <div class="text-sm text-gray-400">Max Codeforces Rating</div>
-                </div>
-                <div class="glass p-6 rounded-2xl shadow-xl text-center animate-fade-in stat-card" style="animation-delay: 0.3s;">
-                    <div class="text-3xl mb-2">🎯</div>
-                    <div class="text-2xl font-bold text-neon">25+</div>
-                    <div class="text-sm text-gray-400">National Contests</div>
-                </div>
+          </div>
+          <div class="project-content">
+            <h3>Pow Pow</h3>
+            <p class="project-description">
+              QR food ordering with bill splitting.
+            </p>
+            <div class="project-tags">
+              <span>Qt/QML</span>
+              <span>C++</span>
             </div>
-
-            <div class="text-center mb-12">
-                <button id="expand-details-btn" class="group inline-flex items-center px-6 py-3 bg-transparent border border-gray-600/50 rounded-2xl text-gray-400 hover:text-neon hover:border-neon/50 transition-all duration-300 hover:shadow-[0_20px_40px_rgba(0,255,136,0.3)] hover:transform hover:-translate-y-2 hover:scale-105">
-                    <span>View detailed achievements</span>
-                    <i class="fas fa-chevron-down ml-2 transition-transform duration-300 group-hover:translate-y-1"></i>
-                </button>
-            </div>
-
-            <div id="detailed-achievements" class="achievements-content">
-                <div class="grid lg:grid-cols-2 gap-8">
-
-                <div class="space-y-8">
-                    <div class="glass p-6 rounded-2xl shadow-xl animate-fade-in">
-                        <div class="flex items-center mb-6">
-                            <div class="bg-neon p-3 rounded-full mr-4">
-                                <i class="fas fa-trophy text-2xl text-black"></i>
-                            </div>
-                            <h3 class="text-2xl font-semibold text-white">Contest Rankings</h3>
-                        </div>
-                        <div class="space-y-3">
-                            <div class="flex items-center justify-between p-4 bg-gray-800/30 rounded-lg hover:bg-gray-800/50 transition-all duration-300 group contest-item">
-                                <div class="flex items-center space-x-3">
-                                    <div class="w-8 h-8 bg-gradient-to-r from-yellow-400 to-yellow-600 rounded-full flex items-center justify-center text-black font-bold text-sm">9</div>
-                                    <div>
-                                        <a href="https://algo.codemarshal.org/contests/duet-iupc-19/standings" target="_blank" class="text-white hover:text-neon transition-colors group-hover:text-neon font-medium">DUET IUPC 2019</a>
-                                        <div class="text-gray-400 text-sm">2019</div>
-                                    </div>
-                                </div>
-                                <i class="fas fa-external-link-alt text-gray-500 group-hover:text-neon transition-colors"></i>
-                            </div>
-
-                            <div class="flex items-center justify-between p-4 bg-gray-800/30 rounded-lg hover:bg-gray-800/50 transition-all duration-300 group contest-item">
-                                <div class="flex items-center space-x-3">
-                                    <div class="w-8 h-8 bg-gradient-to-r from-gray-300 to-gray-500 rounded-full flex items-center justify-center text-black font-bold text-sm">11</div>
-                                    <div>
-                                        <a href="https://toph.co/c/iut-ict-fest-2019/standings" target="_blank" class="text-white hover:text-neon transition-colors group-hover:text-neon font-medium">IUT 10th ICT Fest 2019</a>
-                                        <div class="text-gray-400 text-sm">2019</div>
-                                    </div>
-                                </div>
-                                <i class="fas fa-external-link-alt text-gray-500 group-hover:text-neon transition-colors"></i>
-                            </div>
-
-                            <div class="flex items-center justify-between p-4 bg-gray-800/30 rounded-lg hover:bg-gray-800/50 transition-all duration-300 group contest-item">
-                                <div class="flex items-center space-x-3">
-                                    <div class="w-8 h-8 bg-gradient-to-r from-orange-400 to-orange-600 rounded-full flex items-center justify-center text-black font-bold text-sm">2</div>
-                                    <div>
-                                        <a href="https://toph.co/c/vu-cse-tech-fest-2019-contest/standings" target="_blank" class="text-white hover:text-neon transition-colors group-hover:text-neon font-medium">VU CSE Tech Fest 2019</a>
-                                        <div class="text-gray-400 text-sm">2019 • Runner-up</div>
-                                    </div>
-                                </div>
-                                <i class="fas fa-external-link-alt text-gray-500 group-hover:text-neon transition-colors"></i>
-                            </div>
-
-                            <div class="flex items-center justify-between p-4 bg-gray-800/30 rounded-lg hover:bg-gray-800/50 transition-all duration-300 group contest-item">
-                                <div class="flex items-center space-x-3">
-                                    <div class="w-8 h-8 bg-gradient-to-r from-blue-400 to-blue-600 rounded-full flex items-center justify-center text-black font-bold text-sm">15</div>
-                                    <div>
-                                        <a href="https://toph.co/c/lu-ict-fest-2018/standings" target="_blank" class="text-white hover:text-neon transition-colors group-hover:text-neon font-medium">First LU IUPC 2018</a>
-                                        <div class="text-gray-400 text-sm">2018</div>
-                                    </div>
-                                </div>
-                                <i class="fas fa-external-link-alt text-gray-500 group-hover:text-neon transition-colors"></i>
-                            </div>
-
-                            <div class="flex items-center justify-between p-4 bg-gray-800/30 rounded-lg hover:bg-gray-800/50 transition-all duration-300 group contest-item">
-                                <div class="flex items-center space-x-3">
-                                    <div class="w-8 h-8 bg-gradient-to-r from-purple-400 to-purple-600 rounded-full flex items-center justify-center text-black font-bold text-sm">16</div>
-                                    <div>
-                                        <a href="https://toph.co/c/buet-cse-fest-2019-iupc/standings" target="_blank" class="text-white hover:text-neon transition-colors group-hover:text-neon font-medium">BUET CSE Fest IUPC 2019</a>
-                                        <div class="text-gray-400 text-sm">2019</div>
-                                    </div>
-                                </div>
-                                <i class="fas fa-external-link-alt text-gray-500 group-hover:text-neon transition-colors"></i>
-                            </div>
-
-                            <div class="flex items-center justify-between p-4 bg-gray-800/30 rounded-lg hover:bg-gray-800/50 transition-all duration-300 group contest-item">
-                                <div class="flex items-center space-x-3">
-                                    <div class="w-8 h-8 bg-gradient-to-r from-green-400 to-green-600 rounded-full flex items-center justify-center text-black font-bold text-sm">20</div>
-                                    <div>
-                                        <a href="https://algo.codemarshal.org/contests/mist-ncpc-2020/standings" target="_blank" class="text-white hover:text-neon transition-colors group-hover:text-neon font-medium">MIST NCPC 2020</a>
-                                        <div class="text-gray-400 text-sm">2020</div>
-                                    </div>
-                                </div>
-                                <i class="fas fa-external-link-alt text-gray-500 group-hover:text-neon transition-colors"></i>
-                            </div>
-
-                            <div class="flex items-center justify-between p-4 bg-gray-800/30 rounded-lg hover:bg-gray-800/50 transition-all duration-300 group contest-item">
-                                <div class="flex items-center space-x-3">
-                                    <div class="w-8 h-8 bg-gradient-to-r from-indigo-400 to-indigo-600 rounded-full flex items-center justify-center text-black font-bold text-sm">21</div>
-                                    <div>
-                                        <a href="https://algo.codemarshal.org/contests/gub-iupc-18/standings" target="_blank" class="text-white hover:text-neon transition-colors group-hover:text-neon font-medium">Green University IUPC 2018</a>
-                                        <div class="text-gray-400 text-sm">2018</div>
-                                    </div>
-                                </div>
-                                <i class="fas fa-external-link-alt text-gray-500 group-hover:text-neon transition-colors"></i>
-                            </div>
-
-                            <div class="flex items-center justify-between p-4 bg-gray-800/30 rounded-lg hover:bg-gray-800/50 transition-all duration-300 group contest-item">
-                                <div class="flex items-center space-x-3">
-                                    <div class="w-8 h-8 bg-gradient-to-r from-pink-400 to-pink-600 rounded-full flex items-center justify-center text-black font-bold text-sm">26</div>
-                                    <div>
-                                        <a href="https://algo.codemarshal.org/contests/kuet-iupc-19/standings" target="_blank" class="text-white hover:text-neon transition-colors group-hover:text-neon font-medium">Bitfest KUET IUPC 2019</a>
-                                        <div class="text-gray-400 text-sm">2019</div>
-                                    </div>
-                                </div>
-                                <i class="fas fa-external-link-alt text-gray-500 group-hover:text-neon transition-colors"></i>
-                            </div>
-
-                            <div class="flex items-center justify-between p-4 bg-gray-800/30 rounded-lg hover:bg-gray-800/50 transition-all duration-300 group contest-item">
-                                <div class="flex items-center space-x-3">
-                                    <div class="w-8 h-8 bg-gradient-to-r from-teal-400 to-teal-600 rounded-full flex items-center justify-center text-black font-bold text-sm">36</div>
-                                    <div>
-                                        <a href="https://algo.codemarshal.org/contests/sub_iupc_19/standings" target="_blank" class="text-white hover:text-neon transition-colors group-hover:text-neon font-medium">SUB Inter University 2019</a>
-                                        <div class="text-gray-400 text-sm">2019</div>
-                                    </div>
-                                </div>
-                                <i class="fas fa-external-link-alt text-gray-500 group-hover:text-neon transition-colors"></i>
-                            </div>
-
-                            <div class="flex items-center justify-between p-4 bg-gray-800/30 rounded-lg hover:bg-gray-800/50 transition-all duration-300 group contest-item">
-                                <div class="flex items-center space-x-3">
-                                    <div class="w-8 h-8 bg-gradient-to-r from-red-400 to-red-600 rounded-full flex items-center justify-center text-black font-bold text-sm">39</div>
-                                    <div>
-                                        <a href="https://algo.codemarshal.org/contests/icpc-dhaka-19-onsite-main/standings" target="_blank" class="text-white hover:text-neon transition-colors group-hover:text-neon font-medium">ICPC Dhaka Regional 2019</a>
-                                        <div class="text-gray-400 text-sm">2019</div>
-                                    </div>
-                                </div>
-                                <i class="fas fa-external-link-alt text-gray-500 group-hover:text-neon transition-colors"></i>
-                            </div>
-
-                            <div class="flex items-center justify-between p-4 bg-gray-800/30 rounded-lg hover:bg-gray-800/50 transition-all duration-300 group contest-item">
-                                <div class="flex items-center space-x-3">
-                                    <div class="w-8 h-8 bg-gradient-to-r from-cyan-400 to-cyan-600 rounded-full flex items-center justify-center text-black font-bold text-sm">45</div>
-                                    <div>
-                                        <a href="https://algo.codemarshal.org/contests/icpc-dhaka-17/standings" target="_blank" class="text-white hover:text-neon transition-colors group-hover:text-neon font-medium">ICPC Dhaka Regional 2017</a>
-                                        <div class="text-gray-400 text-sm">2017</div>
-                                    </div>
-                                </div>
-                                <i class="fas fa-external-link-alt text-gray-500 group-hover:text-neon transition-colors"></i>
-                            </div>
-                        </div>
-
-                        <div class="text-right mt-4">
-                            <div class="w-16 h-px bg-gradient-to-r from-transparent via-gray-600 to-transparent ml-auto mb-2"></div>
-                            <p class="text-gray-500 text-xs font-light">...and many more</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="space-y-8">
-                    <div class="glass p-6 rounded-2xl shadow-xl animate-fade-in" style="animation-delay: 0.2s;">
-                        <div class="flex items-center mb-6">
-                            <div class="bg-neonPurple p-3 rounded-full mr-4">
-                                <i class="fas fa-chart-line text-2xl text-black"></i>
-                            </div>
-                            <h3 class="text-2xl font-semibold text-white">Online Judge Stats</h3>
-                        </div>
-
-                        <div class="grid grid-cols-1 gap-3 mb-4">
-                            <div class="group relative overflow-hidden bg-gradient-to-r from-gray-800/50 to-gray-700/30 p-4 rounded-lg hover:from-gray-800/70 hover:to-gray-700/50 transition-all duration-300 transform hover:scale-102">
-                                <div class="absolute inset-0 bg-gradient-to-r from-blue-600/10 to-blue-800/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                                <div class="relative flex items-center justify-between">
-                                    <div class="flex items-center space-x-4">
-                                        <div class="w-12 h-12 bg-white rounded-lg flex items-center justify-center overflow-hidden">
-                                            <img src="assets/images/codeforces-logo.png" alt="Codeforces" class="w-10 h-10 object-contain">
-                                        </div>
-                                        <div>
-                                            <a href="https://codeforces.com/profile/Moshiur_" target="_blank" class="text-white hover:text-neon transition-colors font-semibold text-lg flex items-center">
-                                                Codeforces
-                                                <i class="fas fa-external-link-alt ml-2 text-xs opacity-60"></i>
-                                            </a>
-                                            <div class="text-gray-400 text-sm">Expert Level</div>
-                                        </div>
-                                    </div>
-                                    <div class="text-right">
-                                        <div class="text-2xl font-bold text-blue-600">1864</div>
-                                        <div class="text-xs text-gray-400">Max Rating</div>
-                                    </div>
-                                </div>
-                                <div class="mt-3 flex flex-wrap gap-2">
-                                    <span class="px-3 py-1 bg-blue-600/20 text-blue-600 rounded-full text-xs font-medium">Expert</span>
-                                    <span class="px-3 py-1 bg-blue-600/20 text-blue-600 rounded-full text-xs font-medium">1864 Rating</span>
-                                </div>
-                            </div>
-
-                            <div class="group relative overflow-hidden bg-gradient-to-r from-gray-800/50 to-gray-700/30 p-4 rounded-lg hover:from-gray-800/70 hover:to-gray-700/50 transition-all duration-300 transform hover:scale-102">
-                                <div class="absolute inset-0 bg-gradient-to-r from-green-400/10 to-green-600/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                                <div class="relative flex items-center justify-between">
-                                    <div class="flex items-center space-x-4">
-                                        <div class="w-12 h-12 bg-white rounded-lg flex items-center justify-center overflow-hidden">
-                                            <img src="assets/images/hackerrank-logo.png" alt="HackerRank" class="w-10 h-10 object-contain">
-                                        </div>
-                                        <div>
-                                            <a href="https://www.hackerrank.com/moshiur_cse15" target="_blank" class="text-white hover:text-neonPurple transition-colors font-semibold text-lg flex items-center">
-                                                HackerRank
-                                                <i class="fas fa-external-link-alt ml-2 text-xs opacity-60"></i>
-                                            </a>
-                                            <div class="text-gray-400 text-sm">5-Star Coder</div>
-                                        </div>
-                                    </div>
-                                    <div class="text-right">
-                                        <div class="text-2xl font-bold text-green-400">1951</div>
-                                        <div class="text-xs text-gray-400">Max Rating</div>
-                                    </div>
-                                </div>
-                                <div class="mt-3 flex flex-wrap gap-2">
-                                    <span class="px-3 py-1 bg-green-400/20 text-green-300 rounded-full text-xs font-medium">5 Stars</span>
-                                    <span class="px-3 py-1 bg-green-400/20 text-green-300 rounded-full text-xs font-medium">1951 Rating</span>
-                                </div>
-                            </div>
-
-                            <div class="group relative overflow-hidden bg-gradient-to-r from-gray-800/50 to-gray-700/30 p-4 rounded-lg hover:from-gray-800/70 hover:to-gray-700/50 transition-all duration-300 transform hover:scale-102">
-                                <div class="absolute inset-0 bg-gradient-to-r from-purple-500/10 to-purple-700/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                                <div class="relative flex items-center justify-between">
-                                    <div class="flex items-center space-x-4">
-                                        <div class="w-12 h-12 bg-white rounded-lg flex items-center justify-center overflow-hidden">
-                                            <img src="assets/images/loj-logo.png" alt="LightOJ" class="w-10 h-10 object-contain">
-                                        </div>
-                                        <div>
-                                            <a href="https://lightoj.com/user/moshiur_cse15" target="_blank" class="text-white hover:text-purple-400 transition-colors font-semibold text-lg flex items-center">
-                                                LightOJ
-                                                <i class="fas fa-external-link-alt ml-2 text-xs opacity-60"></i>
-                                            </a>
-                                            <div class="text-gray-400 text-sm">Problem Solver</div>
-                                        </div>
-                                    </div>
-                                    <div class="text-right">
-                                        <div class="text-2xl font-bold text-purple-400">180+</div>
-                                        <div class="text-xs text-gray-400">Problems Solved</div>
-                                    </div>
-                                </div>
-                                <div class="mt-3 flex flex-wrap gap-2">
-                                    <span class="px-3 py-1 bg-purple-500/20 text-purple-300 rounded-full text-xs font-medium">180+ Problems</span>
-                                </div>
-                            </div>
-
-                            <div class="group relative overflow-hidden bg-gradient-to-r from-gray-800/50 to-gray-700/30 p-4 rounded-lg hover:from-gray-800/70 hover:to-gray-700/50 transition-all duration-300 transform hover:scale-102">
-                                <div class="absolute inset-0 bg-gradient-to-r from-red-500/10 to-red-700/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                                <div class="relative flex items-center justify-between">
-                                    <div class="flex items-center space-x-4">
-                                        <div class="w-12 h-12 bg-white rounded-lg flex items-center justify-center overflow-hidden">
-                                            <img src="assets/images/uva-logo.png" alt="UVA" class="w-10 h-10 object-contain">
-                                        </div>
-                                        <div>
-                                            <a href="https://uhunt.onlinejudge.org/id/123456" target="_blank" class="text-white hover:text-red-400 transition-colors font-semibold text-lg flex items-center">
-                                                UVA Online Judge
-                                                <i class="fas fa-external-link-alt ml-2 text-xs opacity-60"></i>
-                                            </a>
-                                            <div class="text-gray-400 text-sm">Problem Solver</div>
-                                        </div>
-                                    </div>
-                                    <div class="text-right">
-                                        <div class="text-2xl font-bold text-red-400">150+</div>
-                                        <div class="text-xs text-gray-400">Problems Solved</div>
-                                    </div>
-                                </div>
-                                <div class="mt-3 flex flex-wrap gap-2">
-                                    <span class="px-3 py-1 bg-red-500/20 text-red-300 rounded-full text-xs font-medium">150+ Problems</span>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <div class="text-right mt-4">
-                            <div class="w-16 h-px bg-gradient-to-r from-transparent via-gray-600 to-transparent ml-auto mb-2"></div>
-                            <p class="text-gray-500 text-xs font-light">...and more platforms</p>
-                        </div>
-                    </div>
-
-                    <div class="glass p-6 rounded-2xl shadow-xl animate-fade-in" style="animation-delay: 0.4s;">
-                        <div class="flex items-center mb-6">
-                            <div class="bg-neon p-3 rounded-full mr-4">
-                                <i class="fas fa-code text-2xl text-black"></i>
-                            </div>
-                            <h3 class="text-2xl font-semibold text-white">Problem Setting</h3>
-                        </div>
-
-                        <div class="mb-4">
-                            <h4 class="text-sm font-semibold text-white mb-3 flex items-center">
-                                <i class="fas fa-award text-neon mr-2 text-sm"></i>
-                                Contests
-                            </h4>
-                            <div class="space-y-2">
-                                <div class="flex items-center text-gray-300 text-sm">
-                                    <i class="fas fa-dot-circle text-neon mr-2 text-xs"></i>
-                                    National High School Programming Contest (2020)
-                                </div>
-                                <div class="flex items-center text-gray-300 text-sm">
-                                    <i class="fas fa-dot-circle text-neonPurple mr-2 text-xs"></i>
-                                    National Girls' Programming Contest (2019)
-                                </div>
-                                <div class="flex items-center text-gray-300 text-sm">
-                                    <i class="fas fa-dot-circle text-neonBlue mr-2 text-xs"></i>
-                                    Ada Lovelace NGPC (2019)
-                                </div>
-                                <div class="flex items-center text-gray-300 text-sm">
-                                    <i class="fas fa-dot-circle text-green-400 mr-2 text-xs"></i>
-                                    Inter School & College Contest (2019)
-                                </div>
-                                <div class="flex items-center text-gray-300 text-sm">
-                                    <i class="fas fa-dot-circle text-yellow-400 mr-2 text-xs"></i>
-                                    RUET Internal Contests (Various Years)
-                                </div>
-                            </div>
-                        </div>
-                        <a href="https://toph.co/u/moshiur_cse15/problems" target="_blank"
-                           class="flex items-center justify-center p-3 bg-gradient-to-r from-neon/10 to-neonPurple/10 rounded-lg border border-neon/20 hover:from-neon/20 hover:to-neonPurple/20 transition-all duration-300 group w-full">
-                            <i class="fas fa-external-link-alt mr-2 text-neon group-hover:text-white"></i>
-                            <span class="text-neon group-hover:text-white font-medium text-sm">View Problem Archive</span>
-                        </a>
-                    </div>
-                </div>
-            </div>
-            </div>
+          </div>
         </div>
-    </section>
+      </div>
+    </div>
+  </section>
 
-    <section id="education" class="py-20 bg-darkbg relative overflow-hidden">
-
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-            <h2 class="text-4xl font-bold text-center mb-12 text-neon animate-fade-in">Education</h2>
-            <div class="grid md:grid-cols-2 gap-8">
-                <div class="glass p-6 rounded-2xl shadow-xl animate-fade-in education-card">
-                    <h3 class="text-2xl font-semibold text-white mb-2">MBA (Professional)</h3>
-                    <h4 class="text-lg text-neon mb-2">Bangladesh University of Professionals</h4>
-                    <p class="text-gray-300">Business Administration</p>
-                </div>
-                <div class="glass p-6 rounded-2xl shadow-xl animate-fade-in education-card" style="animation-delay: 0.2s;">
-                    <h3 class="text-2xl font-semibold text-white mb-2">BSc in CSE</h3>
-                    <h4 class="text-lg text-neon mb-2">Rajshahi University of Engineering & Technology</h4>
-                    <p class="text-gray-300">Computer Science and Engineering</p>
-                </div>
+  <!-- Skills Section -->
+  <section id="skills" class="skills">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">// Skills</span>
+        <h2 class="section-title">Technical Arsenal</h2>
+      </div>
+      <div class="skills-grid">
+        <div class="skill-category">
+          <div class="category-icon">
+            <i class="fas fa-server"></i>
+          </div>
+          <h3>Backend Development</h3>
+          <div class="skill-items">
+            <div class="skill-item expert">
+              <span class="skill-name">.NET Core / C#</span>
+              <div class="skill-bar">
+                <div class="skill-progress" style="width: 95%"></div>
+              </div>
             </div>
-        </div>
-    </section>
-
-    <section id="contact" class="py-20 bg-darkbg relative overflow-hidden">
-
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-            <div class="text-center mb-16">
-                <h2 class="text-4xl font-bold mb-4 text-neon animate-fade-in">Get In Touch</h2>
-                <p class="text-xl text-gray-300 animate-fade-in max-w-2xl mx-auto">Let's connect and discuss opportunities!</p>
+            <div class="skill-item expert">
+              <span class="skill-name">Go</span>
+              <div class="skill-bar">
+                <div class="skill-progress" style="width: 90%"></div>
+              </div>
             </div>
+            <div class="skill-item expert">
+              <span class="skill-name">Laravel / PHP</span>
+              <div class="skill-bar">
+                <div class="skill-progress" style="width: 88%"></div>
+              </div>
+            </div>
+            <div class="skill-item">
+              <span class="skill-name">REST APIs</span>
+              <div class="skill-bar">
+                <div class="skill-progress" style="width: 95%"></div>
+              </div>
+            </div>
+            <div class="skill-item">
+              <span class="skill-name">Microservices</span>
+              <div class="skill-bar">
+                <div class="skill-progress" style="width: 85%"></div>
+              </div>
+            </div>
+          </div>
+        </div>
 
-            <div class="max-w-4xl mx-auto">
-                <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
-                    <a href="mailto:moshi.rahman066@gmail.com" class="group glass p-8 rounded-2xl shadow-xl animate-fade-in text-center contact-card hover:scale-105 transition-all duration-300 cursor-pointer block">
-                        <div class="bg-neon/20 p-6 rounded-full mx-auto mb-4 group-hover:bg-neon/30 transition-colors duration-300 w-fit">
-                            <i class="fas fa-envelope text-neon text-3xl"></i>
-                        </div>
-                        <h3 class="text-lg font-semibold text-white mb-2">Email</h3>
-                        <p class="text-gray-300 group-hover:text-neon transition-colors duration-300 text-sm break-all">moshi.rahman066@gmail.com</p>
-                    </a>
+        <div class="skill-category">
+          <div class="category-icon">
+            <i class="fas fa-cloud"></i>
+          </div>
+          <h3>Cloud & DevOps</h3>
+          <div class="skill-items">
+            <div class="skill-item">
+              <span class="skill-name">AWS (EC2, S3, Lambda)</span>
+              <div class="skill-bar">
+                <div class="skill-progress" style="width: 85%"></div>
+              </div>
+            </div>
+            <div class="skill-item">
+              <span class="skill-name">Docker</span>
+              <div class="skill-bar">
+                <div class="skill-progress" style="width: 88%"></div>
+              </div>
+            </div>
+            <div class="skill-item">
+              <span class="skill-name">CI/CD</span>
+              <div class="skill-bar">
+                <div class="skill-progress" style="width: 80%"></div>
+              </div>
+            </div>
+          </div>
+        </div>
 
-                    <a href="tel:+8801701021612" class="group glass p-8 rounded-2xl shadow-xl animate-fade-in text-center contact-card hover:scale-105 transition-all duration-300 cursor-pointer block" style="animation-delay: 0.1s;">
-                        <div class="bg-neonPurple/20 p-6 rounded-full mx-auto mb-4 group-hover:bg-neonPurple/30 transition-colors duration-300 w-fit">
-                            <i class="fas fa-phone text-neonPurple text-3xl"></i>
-                        </div>
-                        <h3 class="text-lg font-semibold text-white mb-2">Phone</h3>
-                        <p class="text-gray-300 group-hover:text-neonPurple transition-colors duration-300 text-sm break-all">+880 1701021612</p>
-                    </a>
+        <div class="skill-category">
+          <div class="category-icon">
+            <i class="fas fa-database"></i>
+          </div>
+          <h3>Databases</h3>
+          <div class="skill-items">
+            <div class="skill-item expert">
+              <span class="skill-name">PostgreSQL</span>
+              <div class="skill-bar">
+                <div class="skill-progress" style="width: 92%"></div>
+              </div>
+            </div>
+            <div class="skill-item expert">
+              <span class="skill-name">MS SQL Server</span>
+              <div class="skill-bar">
+                <div class="skill-progress" style="width: 90%"></div>
+              </div>
+            </div>
+            <div class="skill-item">
+              <span class="skill-name">MySQL</span>
+              <div class="skill-bar">
+                <div class="skill-progress" style="width: 85%"></div>
+              </div>
+            </div>
+          </div>
+        </div>
 
-                    <a href="https://linkedin.com/in/moshi066" target="_blank" class="group glass p-8 rounded-2xl shadow-xl animate-fade-in text-center contact-card hover:scale-105 transition-all duration-300 cursor-pointer block" style="animation-delay: 0.2s;">
-                        <div class="bg-blue-600/20 p-6 rounded-full mx-auto mb-4 group-hover:bg-blue-600/30 transition-colors duration-300 w-fit">
-                            <i class="fab fa-linkedin text-blue-400 text-3xl"></i>
-                        </div>
-                        <h3 class="text-lg font-semibold text-white mb-2">LinkedIn</h3>
-                        <p class="text-gray-300 group-hover:text-blue-400 transition-colors duration-300">Connect with me professionally</p>
-                    </a>
+        <div class="skill-category">
+          <div class="category-icon">
+            <i class="fas fa-mobile-screen"></i>
+          </div>
+          <h3>Mobile & Frontend</h3>
+          <div class="skill-items">
+            <div class="skill-item">
+              <span class="skill-name">TypeScript</span>
+              <div class="skill-bar">
+                <div class="skill-progress" style="width: 85%"></div>
+              </div>
+            </div>
+            <div class="skill-item">
+              <span class="skill-name">React Native</span>
+              <div class="skill-bar">
+                <div class="skill-progress" style="width: 80%"></div>
+              </div>
+            </div>
+            <div class="skill-item">
+              <span class="skill-name">Next.js</span>
+              <div class="skill-bar">
+                <div class="skill-progress" style="width: 75%"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
-                    <a href="https://github.com/moshi066" target="_blank" class="group glass p-8 rounded-2xl shadow-xl animate-fade-in text-center contact-card hover:scale-105 transition-all duration-300 cursor-pointer block" style="animation-delay: 0.3s;">
-                        <div class="bg-gray-700/20 p-6 rounded-full mx-auto mb-4 group-hover:bg-gray-600/30 transition-colors duration-300 w-fit">
-                            <i class="fab fa-github text-gray-300 text-3xl"></i>
-                        </div>
-                        <h3 class="text-lg font-semibold text-white mb-2">GitHub</h3>
-                        <p class="text-gray-300 group-hover:text-gray-200 transition-colors duration-300">Explore my code repositories</p>
-                    </a>
+  <!-- Competitive Programming Section -->
+  <section id="competitive-programming" class="competitive-programming">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">// Competitive Programming</span>
+        <h2 class="section-title">Problem Solving Journey</h2>
+      </div>
+
+      <!-- Competitive Programming -->
+      <div class="cp-section">
+        
+        <div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 2.5rem; align-items: start;">
+          
+          <!-- Profiles Column -->
+          <div style="display: flex; flex-direction: column; height: 100%;">
+            <h4 style="font-size: 1rem; color: var(--text-primary); margin-bottom: 1rem; display: flex; align-items: center; gap: 0.5rem;">
+              <i class="fas fa-user-circle" style="color: var(--primary);"></i>
+              Profiles
+            </h4>
+            <div style="display: flex; flex-direction: column; gap: 0.75rem; flex: 1; justify-content: space-between;">
+              <a href="https://codeforces.com/profile/Moshiur_" target="_blank" style="display: flex; align-items: center; justify-content: space-between; padding: 0.75rem 1rem; background: rgba(99, 102, 241, 0.05); border: 1px solid var(--border-color); border-radius: 8px; text-decoration: none; transition: all 0.2s;">
+                <div>
+                  <div style="font-size: 0.85rem; color: var(--text-secondary); font-weight: 600;">Codeforces</div>
+                  <div style="font-size: 0.75rem; color: var(--text-muted);"><span style="color: #0a7aff; font-weight: 600;"></span>Expert</span> • 1864</div>
                 </div>
+                <i class="fas fa-arrow-right" style="color: var(--primary); font-size: 0.75rem;"></i>
+              </a>
+              <a href="https://www.hackerrank.com/Moshiur_" target="_blank" style="display: flex; align-items: center; justify-content: space-between; padding: 0.75rem 1rem; background: rgba(99, 102, 241, 0.05); border: 1px solid var(--border-color); border-radius: 8px; text-decoration: none; transition: all 0.2s;">
+                <div>
+                  <div style="font-size: 0.85rem; color: var(--text-secondary); font-weight: 600;">HackerRank</div>
+                  <div style="font-size: 0.75rem; color: var(--text-muted);">Max Rating: 1951</div>
+                </div>
+                <i class="fas fa-arrow-right" style="color: var(--primary); font-size: 0.75rem;"></i>
+              </a>
+              <a href="https://lightoj.com/user/moshiur_cse15" target="_blank" style="display: flex; align-items: center; justify-content: space-between; padding: 0.75rem 1rem; background: rgba(99, 102, 241, 0.05); border: 1px solid var(--border-color); border-radius: 8px; text-decoration: none; transition: all 0.2s;">
+                <div>
+                  <div style="font-size: 0.85rem; color: var(--text-secondary); font-weight: 600;">LightOJ</div>
+                  <div style="font-size: 0.75rem; color: var(--text-muted);">180+ Solved</div>
+                </div>
+                <i class="fas fa-arrow-right" style="color: var(--primary); font-size: 0.75rem;"></i>
+              </a>
+              <a href="https://uhunt.onlinejudge.org/id/339994" target="_blank" style="display: flex; align-items: center; justify-content: space-between; padding: 0.75rem 1rem; background: rgba(99, 102, 241, 0.05); border: 1px solid var(--border-color); border-radius: 8px; text-decoration: none; transition: all 0.2s;">
+                <div>
+                  <div style="font-size: 0.85rem; color: var(--text-secondary); font-weight: 600;">UVa Online Judge</div>
+                  <div style="font-size: 0.75rem; color: var(--text-muted);">300+ Solved</div>
+                </div>
+                <i class="fas fa-arrow-right" style="color: var(--primary); font-size: 0.75rem;"></i>
+              </a>
+              <div style="padding: 0.75rem 1rem; background: rgba(99, 102, 241, 0.05); border: 1px solid var(--border-color); border-radius: 8px;">
+                <div style="font-size: 0.85rem; color: var(--text-secondary); font-weight: 600; margin-bottom: 0.25rem;">Total Solved</div>
+                <div style="font-size: 1.25rem; color: var(--primary); font-weight: 700; font-family: var(--font-mono);">1900+</div>
+              </div>
             </div>
+          </div>
+          
+          <!-- Rankings Column -->
+          <div style="display: flex; flex-direction: column; height: 100%;">
+            <h4 style="font-size: 1rem; color: var(--text-primary); margin-bottom: 1rem; display: flex; align-items: center; gap: 0.5rem;">
+              <i class="fas fa-medal" style="color: var(--warning);"></i>
+              Contest Rankings
+            </h4>
+            <div style="display: flex; flex-direction: column; gap: 0.5rem; flex: 1; justify-content: space-between;">
+              <div style="padding: 0.65rem 0.85rem; background: rgba(99, 102, 241, 0.05); border: 1px solid var(--border-color); border-radius: 6px;">
+                <div style="display: flex; align-items: center; gap: 0.5rem;">
+                  <span style="font-size: 0.9rem; font-weight: 700; color: var(--warning); font-family: var(--font-mono);">#2</span>
+                  <span style="font-size: 0.8rem; color: var(--text-secondary);">VU CSE Tech Fest 2019</span>
+                </div>
+              </div>
+              <div style="padding: 0.65rem 0.85rem; background: rgba(99, 102, 241, 0.05); border: 1px solid var(--border-color); border-radius: 6px;">
+                <div style="display: flex; align-items: center; gap: 0.5rem;">
+                  <span style="font-size: 0.9rem; font-weight: 700; color: var(--primary); font-family: var(--font-mono);">#9</span>
+                  <span style="font-size: 0.8rem; color: var(--text-secondary);">DUET IUPC 2019</span>
+                </div>
+              </div>
+              <div style="padding: 0.65rem 0.85rem; background: rgba(99, 102, 241, 0.05); border: 1px solid var(--border-color); border-radius: 6px;">
+                <div style="display: flex; align-items: center; gap: 0.5rem;">
+                  <span style="font-size: 0.9rem; font-weight: 700; color: var(--primary); font-family: var(--font-mono);">#11</span>
+                  <span style="font-size: 0.8rem; color: var(--text-secondary);">IUT ICT Fest 2019</span>
+                </div>
+              </div>
+              <div style="padding: 0.65rem 0.85rem; background: rgba(99, 102, 241, 0.05); border: 1px solid var(--border-color); border-radius: 6px;">
+                <div style="display: flex; align-items: center; gap: 0.5rem;">
+                  <span style="font-size: 0.9rem; font-weight: 700; color: var(--primary); font-family: var(--font-mono);">#15</span>
+                  <span style="font-size: 0.8rem; color: var(--text-secondary);">First LU IUPC 2018</span>
+                </div>
+              </div>
+              <div style="padding: 0.65rem 0.85rem; background: rgba(99, 102, 241, 0.05); border: 1px solid var(--border-color); border-radius: 6px;">
+                <div style="display: flex; align-items: center; gap: 0.5rem;">
+                  <span style="font-size: 0.9rem; font-weight: 700; color: var(--primary); font-family: var(--font-mono);">#16</span>
+                  <span style="font-size: 0.8rem; color: var(--text-secondary);">BUET CSE Fest 2019</span>
+                </div>
+              </div>
+              <div style="padding: 0.65rem 0.85rem; background: rgba(99, 102, 241, 0.05); border: 1px solid var(--border-color); border-radius: 6px;">
+                <div style="display: flex; align-items: center; gap: 0.5rem;">
+                  <span style="font-size: 0.9rem; font-weight: 700; color: var(--primary); font-family: var(--font-mono);">#20</span>
+                  <span style="font-size: 0.8rem; color: var(--text-secondary);">MIST NCPC 2020</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Judging Column -->
+          <div style="display: flex; flex-direction: column; height: 100%;">
+            <h4 style="font-size: 1rem; color: var(--text-primary); margin-bottom: 1rem; display: flex; align-items: center; gap: 0.5rem;">
+              <i class="fas fa-gavel" style="color: var(--accent);"></i>
+              Judging & Mentoring
+            </h4>
+            <div style="display: flex; flex-direction: column; gap: 0.5rem; flex: 1; justify-content: space-between;">
+              <div style="padding: 0.65rem 0.85rem; background: rgba(99, 102, 241, 0.05); border: 1px solid var(--border-color); border-radius: 6px;">
+                <div style="font-size: 0.8rem; color: var(--text-secondary); margin-bottom: 0.25rem;">National High School Programming Contestwhy</div>
+                <div style="font-size: 0.7rem; color: var(--text-muted);">2020 • Judge</div>
+              </div>
+              <div style="padding: 0.65rem 0.85rem; background: rgba(99, 102, 241, 0.05); border: 1px solid var(--border-color); border-radius: 6px;">
+                <div style="font-size: 0.8rem; color: var(--text-secondary); margin-bottom: 0.25rem;">National Girls' Programming Contest</div>
+                <div style="font-size: 0.7rem; color: var(--text-muted);">2019 • Judge</div>
+              </div>
+              <div style="padding: 0.65rem 0.85rem; background: rgba(99, 102, 241, 0.05); border: 1px solid var(--border-color); border-radius: 6px;">
+                <div style="font-size: 0.8rem; color: var(--text-secondary); margin-bottom: 0.25rem;">Ada Lovelace NGPC</div>
+                <div style="font-size: 0.7rem; color: var(--text-muted);">2019 • Judge</div>
+              </div>
+              <div style="padding: 0.65rem 0.85rem; background: rgba(99, 102, 241, 0.05); border: 1px solid var(--border-color); border-radius: 6px;">
+                <div style="font-size: 0.8rem; color: var(--text-secondary); margin-bottom: 0.25rem;">RUET Programming Lab</div>
+                <div style="font-size: 0.7rem; color: var(--text-muted);">Mentor</div>
+              </div>
+              <a href="https://toph.co/u/moshiur_cse15/problems" target="_blank" style="display: flex; align-items: center; justify-content: space-between; padding: 0.65rem 0.85rem; background: rgba(20, 184, 166, 0.1); border: 1px solid rgba(20, 184, 166, 0.2); border-radius: 8px; text-decoration: none; margin-top: 0.5rem; transition: all 0.2s;">
+                <div style="font-size: 0.8rem; color: var(--accent); font-weight: 600;">Problem Archive</div>
+                <i class="fas fa-arrow-right" style="color: var(--accent); font-size: 0.75rem;"></i>
+              </a>
+            </div>
+          </div>
+          
         </div>
-    </section>
+      </div>
+    </div>
+  </section>
 
-    <footer class="bg-black py-8 border-t border-gray-700">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <p class="text-gray-500 mt-2 font-mono">© 2025 Md Moshiur Rahman. All rights reserved.</p>
+  <!-- Contact Section -->
+  <section id="contact" class="contact">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">// Get In Touch</span>
+        <h2 class="section-title">Let's Build Something Cool</h2>
+      </div>
+      <div class="contact-content">
+        <div class="contact-info">
+          <p class="contact-text">
+            Open to new opportunities, challenging projects, and tech discussions. Whether you want to collaborate on something cool, need help with a tricky backend problem, or just want to chat about system design, hit me up!
+          </p>
+          <div class="contact-methods">
+            <a href="mailto:moshi.rahman066@gmail.com" class="contact-method">
+              <div class="method-icon">
+                <i class="fas fa-envelope"></i>
+              </div>
+              <div class="method-details">
+                <span class="method-label">Email</span>
+                <span class="method-value">moshi.rahman066@gmail.com</span>
+              </div>
+            </a>
+            <a href="tel:+8801701021612" class="contact-method">
+              <div class="method-icon">
+                <i class="fas fa-phone"></i>
+              </div>
+              <div class="method-details">
+                <span class="method-label">Phone</span>
+                <span class="method-value">+880 1701021612</span>
+              </div>
+            </a>
+            <a href="https://linkedin.com/in/moshi066" target="_blank" class="contact-method">
+              <div class="method-icon">
+                <i class="fab fa-linkedin"></i>
+              </div>
+              <div class="method-details">
+                <span class="method-label">LinkedIn</span>
+                <span class="method-value">linkedin.com/in/moshi066</span>
+              </div>
+            </a>
+            <a href="https://github.com/moshi066" target="_blank" class="contact-method">
+              <div class="method-icon">
+                <i class="fab fa-github"></i>
+              </div>
+              <div class="method-details">
+                <span class="method-label">GitHub</span>
+                <span class="method-value">github.com/moshi066</span>
+              </div>
+            </a>
+          </div>
         </div>
-    </footer>
+        <div class="contact-visual">
+          <div class="contact-card">
+            <div class="card-glow"></div>
+            <h3>Available for Work</h3>
+            <p>Currently open to full-time opportunities, freelance projects, and consulting gigs. Let's talk about what we can build together.</p>
+            <div style="margin-top: 2rem; padding: 1.5rem; background: rgba(99, 102, 241, 0.1); border: 1px solid rgba(99, 102, 241, 0.2); border-radius: 12px;">
+              <div style="font-size: 0.875rem; color: var(--text-muted); margin-bottom: 0.5rem;">Response Time</div>
+              <div style="font-size: 1.25rem; font-weight: 700; color: var(--primary);">Within 24 hours</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
-    <div id="scroll-progress" class="fixed top-0 left-0 h-1 bg-neon z-50"></div>
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-left">
+          <div class="footer-logo">
+            <span class="logo-bracket">&lt;</span>
+            <span class="logo-text">MR</span>
+            <span class="logo-bracket">/&gt;</span>
+          </div>
+          <p>Building scalable backend systems, one line at a time.</p>
+        </div>
+        <div class="footer-links">
+          <a href="#home">Home</a>
+          <a href="#about">About</a>
+          <a href="#experience">Experience</a>
+          <a href="#projects">Projects</a>
+          <a href="#skills">Skills</a>
+          <a href="#competitive-programming">CP</a>
+          <a href="#contact">Contact</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2025 Md Moshiur Rahman. Crafted with passion and code.</p>
+      </div>
+    </div>
+  </footer>
 
-    <button id="back-to-top" class="fixed bottom-8 right-8 bg-secondary text-white p-3 rounded-full shadow-lg opacity-0 transition-opacity duration-300 hover:bg-neon hover:text-black z-50">
-        <i class="fas fa-arrow-up"></i>
-    </button>
-
-    <script src="assets/js/script.js" defer></script>
+  <script src="assets/js/script.js"></script>
 </body>
 </html>
