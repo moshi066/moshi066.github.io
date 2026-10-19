@@ -1,0 +1,617 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Md Moshiur Rahman — Senior Software Engineer (.NET · Go · Next.js)</title>
+  <meta name="description" content="Senior Software Engineer in Dhaka with 5+ years designing, shipping, and operating production web systems in C#/.NET and Go, Next.js frontends, PostgreSQL and Redis on AWS. Codeforces Expert with 1,900+ problems solved.">
+  <meta name="theme-color" content="#070709">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://moshi066.github.io/">
+  <meta property="og:title" content="Md Moshiur Rahman — Senior Software Engineer">
+  <meta property="og:description" content="Backend-heavy full-stack engineer. .NET, Go, Next.js, PostgreSQL, Redis, AWS. Multi-tenant SaaS, RBAC, zero-downtime CI/CD. Codeforces Expert.">
+  <meta name="twitter:card" content="summary">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23d6ff4b'/%3E%3Ctext x='50%25' y='55%25' dominant-baseline='middle' text-anchor='middle' font-family='Arial,Helvetica,sans-serif' font-weight='800' font-size='36' fill='%23070709'%3EM%3C/text%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@500;600;700;800&family=Manrope:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <script>document.documentElement.classList.add('js');</script>
+</head>
+<body>
+  <a class="skip" href="#about">Skip to content</a>
+
+  <!-- Preloader -->
+  <div class="preloader" id="preloader" aria-hidden="true">
+    <div class="preloader__inner">
+      <div class="preloader__logo">MR<span class="dot">.</span></div>
+      <div class="preloader__bar"><span id="preloaderBar"></span></div>
+      <div class="preloader__count"><span id="preloaderCount">0</span>%</div>
+    </div>
+  </div>
+
+  <!-- Custom cursor, grain, scroll progress -->
+  <div class="cursor" id="cursor" aria-hidden="true">
+    <div class="cursor__dot"></div>
+    <div class="cursor__ring"></div>
+  </div>
+  <div class="noise" aria-hidden="true"></div>
+  <div class="progress" id="progress" aria-hidden="true"><span></span></div>
+
+  <!-- Navigation -->
+  <header class="nav" id="nav">
+    <div class="nav__inner">
+      <a href="#top" class="nav__logo" aria-label="Back to top">MR<span class="dot">.</span></a>
+      <nav class="nav__links" aria-label="Primary">
+        <a href="#about" data-nav="about">About</a>
+        <a href="#experience" data-nav="experience">Experience</a>
+        <a href="#work" data-nav="work">Work</a>
+        <a href="#skills" data-nav="skills">Skills</a>
+        <a href="#cp" data-nav="cp">CP</a>
+        <a href="#contact" data-nav="contact">Contact</a>
+      </nav>
+      <a class="btn btn--small btn--primary nav__cta" href="assets/Resume_of_Md_Moshiur_Rahman.pdf" download>
+        Résumé
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12"/><path d="m7 10 5 5 5-5"/><path d="M5 21h14"/></svg>
+      </a>
+      <button class="nav__burger" id="navBurger" aria-label="Open menu" aria-expanded="false" aria-controls="menu">
+        <span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Fullscreen mobile menu -->
+  <div class="menu" id="menu" aria-hidden="true">
+    <nav class="menu__links" aria-label="Mobile">
+      <a href="#about"><span>01</span>About</a>
+      <a href="#experience"><span>02</span>Experience</a>
+      <a href="#work"><span>03</span>Work</a>
+      <a href="#skills"><span>04</span>Skills</a>
+      <a href="#cp"><span>05</span>Competitive Programming</a>
+      <a href="#contact"><span>06</span>Contact</a>
+    </nav>
+    <div class="menu__foot">
+      <a href="mailto:moshi.rahman066@gmail.com">moshi.rahman066@gmail.com</a>
+      <div class="menu__social">
+        <a href="https://github.com/moshi066" target="_blank" rel="noopener">GitHub</a>
+        <a href="https://linkedin.com/in/moshi066" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="https://codeforces.com/profile/Moshiur_" target="_blank" rel="noopener">Codeforces</a>
+      </div>
+    </div>
+  </div>
+
+  <main id="top">
+
+    <!-- ============ HERO ============ -->
+    <section class="hero" id="hero">
+      <canvas class="hero__gl" id="heroGL" aria-hidden="true"></canvas>
+      <canvas class="hero__canvas" id="heroCanvas" aria-hidden="true"></canvas>
+      <div class="hero__glow hero__glow--1" aria-hidden="true"></div>
+      <div class="hero__glow hero__glow--2" aria-hidden="true"></div>
+
+      <div class="container hero__inner">
+        <div class="hero__eyebrow" data-intro>
+          <span class="pulse" aria-hidden="true"></span>
+          Open to senior backend &amp; full-stack roles
+        </div>
+
+        <h1 class="hero__title">
+          <span class="line"><span class="line__inner" data-intro-line>Md Moshiur</span></span>
+          <span class="line"><span class="line__inner" data-intro-line>Rahman<span class="dot">.</span></span></span>
+        </h1>
+
+        <div class="hero__grid">
+          <div class="hero__left">
+            <div class="hero__role" data-intro>
+              <span class="hero__role-main">Senior Software Engineer</span>
+              <span class="hero__role-sub">.NET / C# <i>·</i> Go <i>·</i> Next.js</span>
+            </div>
+            <p class="hero__lead" data-intro>
+              I design, ship, and run production backends end to end: schemas, tenancy, APIs, CI/CD, and the Next.js on top.
+            </p>
+            <div class="hero__cta" data-intro>
+              <a href="#work" class="btn btn--primary" data-magnetic>
+                View selected work
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m13 6 6 6-6 6"/></svg>
+              </a>
+              <a href="assets/Resume_of_Md_Moshiur_Rahman.pdf" class="btn btn--ghost" data-magnetic download>
+                Download résumé
+              </a>
+            </div>
+            <ul class="hero__stats" data-intro>
+              <li><span class="stat__num" data-count="5" data-suffix="+">0</span><span class="stat__label">Years in production</span></li>
+              <li><span class="stat__num" data-count="1864">0</span><span class="stat__label">Codeforces peak</span></li>
+              <li><span class="stat__num" data-count="1900" data-suffix="+">0</span><span class="stat__label">Problems solved</span></li>
+              <li><span class="stat__num" data-count="24">0</span><span class="stat__label">ERP modules owned</span></li>
+            </ul>
+          </div>
+
+          <div class="hero__right" data-intro>
+            <div class="sys" id="sys" data-tilt>
+              <div class="sys__head">
+                <span class="sys__status"><span class="pulse pulse--sm" aria-hidden="true"></span>production</span>
+                <span class="sys__meta">multi-tenant · zero-downtime deploys</span>
+              </div>
+              <svg class="sys__svg" viewBox="0 0 520 272" aria-label="Animated diagram: Next.js to Nginx to a .NET API with tenant middleware and RBAC cache, backed by Redis, PostgreSQL and AWS">
+                <defs>
+                  <filter id="pktGlow" x="-100%" y="-100%" width="300%" height="300%">
+                    <feGaussianBlur stdDeviation="2.4" result="b"/>
+                    <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+                  </filter>
+                </defs>
+                <!-- edges -->
+                <path id="e1" class="sys__edge" d="M116 136 H150"/>
+                <path id="e2" class="sys__edge" d="M230 136 H270"/>
+                <path id="e3" class="sys__edge" d="M390 118 C416 118 428 86 428 58"/>
+                <path id="e4" class="sys__edge" d="M390 154 C416 154 428 188 428 214"/>
+                <path id="e5" class="sys__edge" d="M330 178 V216"/>
+                <path id="e6" class="sys__edge sys__edge--ghost" d="M270 144 H116"/>
+                <!-- nodes -->
+                <g class="sys__node" style="--d:2.55s"><rect x="20" y="114" width="96" height="44" rx="11"/><text x="68" y="141">Next.js</text></g>
+                <g class="sys__node" style="--d:.55s"><rect x="150" y="114" width="80" height="44" rx="11"/><text x="190" y="141">Nginx</text></g>
+                <g class="sys__node sys__node--core" style="--d:.9s">
+                  <rect x="270" y="94" width="120" height="84" rx="13"/>
+                  <text x="330" y="118">.NET API</text>
+                  <rect class="sys__pill" x="282" y="130" width="96" height="16" rx="8"/><text class="sys__pt" x="330" y="141">tenant middleware</text>
+                  <rect class="sys__pill" x="282" y="152" width="96" height="16" rx="8"/><text class="sys__pt" x="330" y="163">rbac · redis cache</text>
+                </g>
+                <g class="sys__node" style="--d:1.5s"><rect x="428" y="36" width="80" height="44" rx="11"/><text x="468" y="63">Redis</text></g>
+                <g class="sys__node" style="--d:1.5s"><rect x="420" y="192" width="96" height="44" rx="11"/><text x="468" y="219">PostgreSQL</text></g>
+                <g class="sys__node" style="--d:1.42s"><rect x="272" y="216" width="116" height="44" rx="11"/><text x="330" y="243">AWS S3 · SES</text></g>
+                <!-- packets -->
+                <circle class="sys__pkt" r="4" opacity="0">
+                  <animateMotion dur="3.6s" repeatCount="indefinite" calcMode="linear" keyPoints="0;0;1;1" keyTimes="0;0.02;0.15;1"><mpath href="#e1"/></animateMotion>
+                  <animate attributeName="opacity" dur="3.6s" repeatCount="indefinite" values="0;1;1;0;0" keyTimes="0;0.02;0.14;0.17;1"/>
+                </circle>
+                <circle class="sys__pkt" r="4" opacity="0">
+                  <animateMotion dur="3.6s" repeatCount="indefinite" calcMode="linear" keyPoints="0;0;1;1" keyTimes="0;0.15;0.25;1"><mpath href="#e2"/></animateMotion>
+                  <animate attributeName="opacity" dur="3.6s" repeatCount="indefinite" values="0;1;1;0;0" keyTimes="0;0.15;0.24;0.27;1"/>
+                </circle>
+                <circle class="sys__pkt" r="4" opacity="0">
+                  <animateMotion dur="3.6s" repeatCount="indefinite" calcMode="linear" keyPoints="0;0;1;1" keyTimes="0;0.27;0.42;1"><mpath href="#e3"/></animateMotion>
+                  <animate attributeName="opacity" dur="3.6s" repeatCount="indefinite" values="0;1;1;0;0" keyTimes="0;0.27;0.41;0.44;1"/>
+                </circle>
+                <circle class="sys__pkt" r="4" opacity="0">
+                  <animateMotion dur="3.6s" repeatCount="indefinite" calcMode="linear" keyPoints="0;0;1;1" keyTimes="0;0.27;0.42;1"><mpath href="#e4"/></animateMotion>
+                  <animate attributeName="opacity" dur="3.6s" repeatCount="indefinite" values="0;1;1;0;0" keyTimes="0;0.27;0.41;0.44;1"/>
+                </circle>
+                <circle class="sys__pkt" r="4" opacity="0">
+                  <animateMotion dur="3.6s" repeatCount="indefinite" calcMode="linear" keyPoints="0;0;1;1" keyTimes="0;0.29;0.40;1"><mpath href="#e5"/></animateMotion>
+                  <animate attributeName="opacity" dur="3.6s" repeatCount="indefinite" values="0;1;1;0;0" keyTimes="0;0.29;0.39;0.42;1"/>
+                </circle>
+                <circle class="sys__pkt sys__pkt--back" r="4" opacity="0">
+                  <animateMotion dur="3.6s" repeatCount="indefinite" calcMode="linear" keyPoints="0;0;1;1" keyTimes="0;0.52;0.72;1"><mpath href="#e6"/></animateMotion>
+                  <animate attributeName="opacity" dur="3.6s" repeatCount="indefinite" values="0;1;1;0;0" keyTimes="0;0.52;0.71;0.74;1"/>
+                </circle>
+              </svg>
+              <div class="sys__log" id="sysLog" aria-hidden="true">
+                <div class="sys__line"><b>POST</b> /api/orders <i>tenant=acme</i> rbac=cached 41ms <b>201</b></div>
+                <div class="sys__line"><b>HOOK</b> stripe.invoice.paid sig=ok <i>idempotent</i> 12ms <b>200</b></div>
+                <div class="sys__line"><b>JOB</b> verify-batch#512 workers=8 <i>8,000/day</i> done 2.1s</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero__badge" aria-hidden="true">
+        <svg viewBox="0 0 200 200">
+          <defs><path id="badgeCircle" d="M100,100 m-72,0 a72,72 0 1,1 144,0 a72,72 0 1,1 -144,0"/></defs>
+          <text><textPath href="#badgeCircle">BACKEND ARCHITECTURE · .NET · GO · NEXT.JS · POSTGRES · </textPath></text>
+        </svg>
+        <svg class="hero__badge-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14"/><path d="m5 12 7 7 7-7"/></svg>
+      </div>
+
+      <a href="#about" class="hero__scroll" aria-label="Scroll to content">
+        <span class="hero__scroll-label">Scroll</span>
+        <span class="hero__scroll-line"><span></span></span>
+      </a>
+    </section>
+
+    <!-- ============ MARQUEE ============ -->
+    <div class="marquee" aria-hidden="true">
+      <div class="marquee__track" id="marqueeTrack">
+        <div class="marquee__group">
+          <span>C#</span><span>.NET</span><span>ASP.NET Core</span><span>EF Core</span><span>Go</span><span>TypeScript</span><span>Next.js</span><span>React</span><span>PostgreSQL</span><span>Redis</span><span>AWS</span><span>Docker</span><span>Nginx</span><span>GitHub Actions</span><span>Stripe</span><span>SignalR</span><span>Hangfire</span><span>Tailwind CSS</span>
+        </div>
+        <div class="marquee__group">
+          <span>C#</span><span>.NET</span><span>ASP.NET Core</span><span>EF Core</span><span>Go</span><span>TypeScript</span><span>Next.js</span><span>React</span><span>PostgreSQL</span><span>Redis</span><span>AWS</span><span>Docker</span><span>Nginx</span><span>GitHub Actions</span><span>Stripe</span><span>SignalR</span><span>Hangfire</span><span>Tailwind CSS</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- ============ ABOUT ============ -->
+    <section class="section about" id="about">
+      <span class="section__ghost" data-parallax aria-hidden="true">01</span>
+      <div class="container">
+        <div class="section__head">
+          <div class="section__label" data-reveal><span class="section__index">01</span>About</div>
+          <h2 class="section__title" data-split>Backend-heavy. <em>Full-stack</em> capable. Production-minded.</h2>
+        </div>
+
+        <div class="about__grid">
+          <div class="about__main">
+            <p class="about__text" data-words>
+              Senior Software Engineer at REEA Digital in Dhaka. Five-plus years designing and running production systems in C#/.NET and Go, with Next.js up front and PostgreSQL, Redis, and AWS underneath. I own the whole path to production: schema, tenancy, tests, and CI/CD.
+            </p>
+            <div class="about__chips" data-reveal-group>
+              <span class="chip">Dhaka, Bangladesh</span>
+              <span class="chip">B.Sc. CSE · RUET 2021</span>
+              <span class="chip">English C1 · Bengali native</span>
+              <span class="chip">Codeforces Expert</span>
+              <span class="chip">Judge · setter · mentor</span>
+            </div>
+          </div>
+
+          <div class="pillars" data-reveal-group="cards">
+            <div class="pillar card">
+              <span class="pillar__idx">A</span>
+              <div><h3>Architecture ownership</h3><p>Sole backend architect of a 24-module ERP, from first commit to production.</p></div>
+            </div>
+            <div class="pillar card">
+              <span class="pillar__idx">B</span>
+              <div><h3>Multi-tenant SaaS</h3><p>Dual-layer isolation and a Redis-backed RBAC engine with ~290 permissions.</p></div>
+            </div>
+            <div class="pillar card">
+              <span class="pillar__idx">C</span>
+              <div><h3>Reliability &amp; DevOps</h3><p>Dockerized test suites, Nginx, GitHub Actions, zero-downtime migrations.</p></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ EXPERIENCE ============ -->
+    <section class="section experience" id="experience">
+      <span class="section__ghost" data-parallax aria-hidden="true">02</span>
+      <div class="container">
+        <div class="section__head">
+          <div class="section__label" data-reveal><span class="section__index">02</span>Experience</div>
+          <h2 class="section__title" data-split>Where I've <em>shipped</em>.</h2>
+        </div>
+
+        <div class="xp">
+          <article class="xp__item">
+            <header class="xp__head" data-reveal>
+              <div class="xp__co">
+                <h3>REEA Digital Limited</h3>
+                <span class="xp__loc">Dhaka, Bangladesh · Dec 2022 — Present</span>
+              </div>
+              <ul class="xp__roles">
+                <li><b>Senior Software Engineer</b><time>Jan 2024 — Present</time></li>
+                <li><b>Software Engineer</b><time>Dec 2022 — Jan 2024</time></li>
+              </ul>
+            </header>
+            <div class="hl__grid" data-reveal-group="cards">
+              <div class="hl card">
+                <div class="hl__metric"><b>24</b><span>modules</span></div>
+                <h4>Sole backend architect, Texera ERP</h4>
+                <p>Owned the architecture, schema, and reviews for a B2B textile ERP on .NET, PostgreSQL, Redis, and AWS. Led a team of three from first commit to production.</p>
+              </div>
+              <div class="hl card">
+                <div class="hl__metric"><b>0</b><span>tenant leaks</span></div>
+                <h4>Dual-layer tenant isolation</h4>
+                <p>Request-scoped tenant middleware plus EF Core query filters across every module. Zero cross-tenant data leaks in production.</p>
+              </div>
+              <div class="hl card">
+                <div class="hl__metric"><b data-prefix="~">290</b><span>permissions</span></div>
+                <h4>Redis-backed RBAC engine</h4>
+                <p>Granular permissions across API endpoints and Next.js routes, cached in Redis with targeted invalidation. No per-request permission joins.</p>
+              </div>
+              <div class="hl card">
+                <div class="hl__metric"><b>0</b><span>downtime</span></div>
+                <h4>CI/CD &amp; testing ownership</h4>
+                <p>Dockerized integration suites, Nginx reverse proxies, and GitHub Actions pipelines with zero-downtime database migrations.</p>
+              </div>
+              <div class="hl card">
+                <div class="hl__metric"><b>0</b><span>double charges</span></div>
+                <h4>Youmio store &amp; Stripe billing</h4>
+                <p>Next.js CMS and .NET subscription pipelines. Idempotency keys, webhook signature checks, and transaction locks for concurrent checkouts.</p>
+              </div>
+              <div class="hl card">
+                <div class="hl__metric"><b>75</b><span>% faster</span></div>
+                <h4>Go batch verification service</h4>
+                <p>Bounded worker pools and SES rate-limiting. About 8,000 verifications a day across 500+ batches, versus sequential processing.</p>
+              </div>
+            </div>
+          </article>
+
+          <article class="xp__item">
+            <header class="xp__head" data-reveal>
+              <div class="xp__co">
+                <h3>Enosis Solutions</h3>
+                <span class="xp__loc">Dhaka, Bangladesh · Apr 2021 — Dec 2022</span>
+              </div>
+              <ul class="xp__roles">
+                <li><b>Software Engineer</b><time>Apr 2021 — Dec 2022</time></li>
+              </ul>
+            </header>
+            <div class="hl__grid" data-reveal-group="cards">
+              <div class="hl card">
+                <div class="hl__metric"><b>50</b><span>+ bugs fixed</span></div>
+                <h4>Legacy WPF to clean MVVM</h4>
+                <p>Rebuilt the UI layers of a legacy desktop app, cut its memory footprint, and resolved thread-sync and race-condition bugs.</p>
+              </div>
+              <div class="hl card">
+                <div class="hl__metric"><b>TCP</b><span>async sockets</span></div>
+                <h4>X-ray spectrometer control</h4>
+                <p>Rebuilt the WinForms control interface and asynchronous socket layer for Cianflone Scientific's industrial device.</p>
+              </div>
+              <div class="hl card">
+                <div class="hl__metric"><b>Auto</b><span>crash capture</span></div>
+                <h4>Diagnostic crash telemetry</h4>
+                <p>Crash-dump capture and diagnostic upload utility for a commercial gaming peripheral suite, shortening bug triage.</p>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ WORK (pinned horizontal) ============ -->
+    <section class="section work" id="work">
+      <div class="work__pin" id="workPin">
+        <span class="section__ghost" data-parallax aria-hidden="true">03</span>
+        <div class="container">
+          <div class="section__head">
+            <div class="section__label" data-reveal><span class="section__index">03</span>Selected work</div>
+            <h2 class="section__title" data-split>Systems I've <em>owned</em> in production.</h2>
+          </div>
+        </div>
+
+        <div class="work__track" id="workTrack">
+          <!-- Texera -->
+          <article class="panel card" data-panel data-tilt>
+            <div class="panel__body">
+              <div class="panel__top"><span class="panel__idx">01</span><span class="panel__kind">Multi-tenant SaaS ERP</span></div>
+              <h3 class="panel__title">Texera</h3>
+              <p class="panel__desc">Sole backend architect for a 24-module B2B ERP: schema, tenant isolation, RBAC, and the whole path to production on AWS.</p>
+              <ul class="panel__metrics">
+                <li><span class="metric__num" data-count="24">0</span><span class="metric__label">Modules</span></li>
+                <li><span class="metric__num" data-count="290" data-prefix="~">0</span><span class="metric__label">Permissions</span></li>
+                <li><span class="metric__num" data-count="0">0</span><span class="metric__label">Tenant leaks</span></li>
+              </ul>
+              <div class="tags"><span>.NET</span><span>EF Core</span><span>PostgreSQL</span><span>Redis</span><span>Next.js</span><span>AWS</span><span>Docker</span><span>GitHub Actions</span></div>
+            </div>
+            <div class="panel__visual" aria-hidden="true">
+              <div class="viz-grid">
+                <i></i><i></i><i></i><i></i><i></i><i></i>
+                <i></i><i></i><i></i><i></i><i></i><i></i>
+                <i></i><i></i><i></i><i></i><i></i><i></i>
+                <i></i><i></i><i></i><i></i><i></i><i></i>
+              </div>
+              <div class="viz-caption">24 modules · tenant middleware · EF Core query filters</div>
+            </div>
+          </article>
+
+          <!-- Youmio -->
+          <article class="panel card" data-panel data-tilt>
+            <div class="panel__body">
+              <div class="panel__top"><span class="panel__idx">02</span><span class="panel__kind">In-game store &amp; billing</span></div>
+              <h3 class="panel__title">Youmio</h3>
+              <p class="panel__desc">Next.js CMS and .NET storefront backend with Stripe subscriptions, hardened for concurrent checkouts.</p>
+              <ul class="panel__metrics">
+                <li><span class="metric__num" data-count="0">0</span><span class="metric__label">Duplicate charges</span></li>
+                <li><span class="metric__num">3</span><span class="metric__label">Safety layers</span></li>
+              </ul>
+              <div class="tags"><span>.NET</span><span>Next.js</span><span>Stripe</span><span>PostgreSQL</span></div>
+            </div>
+            <div class="panel__visual" aria-hidden="true">
+              <div class="viz-flow">
+                <div class="viz-flow__pills"><span>idempotency key</span><span>webhook signature</span><span>transaction lock</span></div>
+                <div class="viz-flow__check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12 5 5L20 7"/></svg></div>
+              </div>
+              <div class="viz-caption">concurrent checkouts · charged exactly once</div>
+            </div>
+          </article>
+
+          <!-- Go service -->
+          <article class="panel card" data-panel data-tilt>
+            <div class="panel__body">
+              <div class="panel__top"><span class="panel__idx">03</span><span class="panel__kind">Async batch service</span></div>
+              <h3 class="panel__title">Verification engine</h3>
+              <p class="panel__desc">Burst-tolerant email verification and scheduling backend in Go, with bounded worker pools and SES rate-limiting.</p>
+              <ul class="panel__metrics">
+                <li><span class="metric__num" data-count="8000" data-prefix="~">0</span><span class="metric__label">Per day</span></li>
+                <li><span class="metric__num" data-count="75" data-suffix="%">0</span><span class="metric__label">Faster</span></li>
+                <li><span class="metric__num" data-count="500" data-suffix="+">0</span><span class="metric__label">Batches</span></li>
+              </ul>
+              <div class="tags"><span>Go</span><span>PostgreSQL</span><span>AWS SES</span><span>Worker pools</span></div>
+            </div>
+            <div class="panel__visual" aria-hidden="true">
+              <div class="viz-pool">
+                <div class="viz-pool__lane"><i></i></div>
+                <div class="viz-pool__lane"><i></i></div>
+                <div class="viz-pool__lane"><i></i></div>
+                <div class="viz-pool__lane"><i></i></div>
+                <span class="viz-pool__label">bounded worker pool</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- More -->
+          <article class="panel panel--list card" data-panel>
+            <div class="panel__body">
+              <div class="panel__top"><span class="panel__idx">04</span><span class="panel__kind">More work</span></div>
+              <h3 class="panel__title panel__title--sm">Also built</h3>
+              <ul class="more">
+                <li><span>X-ray spectrometer control</span><em>.NET · WinForms · TCP</em></li>
+                <li><span>Legacy WPF to MVVM</span><em>.NET · WPF</em></li>
+                <li><span>Crash telemetry utility</span><em>.NET · diagnostics</em></li>
+                <li><span>Arabic Unlocked</span><em>React Native · Expo</em></li>
+                <li><span>Educube</span><em>Laravel · Dropbox &amp; Xero APIs</em></li>
+                <li><span>Pow Pow</span><em>Qt/QML · C++</em></li>
+              </ul>
+            </div>
+          </article>
+        </div>
+
+        <div class="container work__progress" aria-hidden="true">
+          <span class="work__count"><b id="workIdx">01</b> / 04</span>
+          <span class="work__bar"><i id="workBar"></i></span>
+          <span class="work__hint">Scroll</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ SKILLS ============ -->
+    <section class="section skills" id="skills">
+      <span class="section__ghost" data-parallax aria-hidden="true">04</span>
+      <div class="container">
+        <div class="section__head">
+          <div class="section__label" data-reveal><span class="section__index">04</span>Skills</div>
+          <h2 class="section__title" data-split>The <em>toolkit</em>.</h2>
+        </div>
+
+        <div class="bento">
+          <div class="bento__item bento__item--lang card" data-reveal>
+            <div class="bento__head"><span class="bento__idx">A</span><h3>Languages</h3></div>
+            <div class="chips" data-reveal-group>
+              <span class="chip chip--lg">C#</span><span class="chip chip--lg">Go</span><span class="chip chip--lg">TypeScript</span><span class="chip chip--lg">JavaScript</span><span class="chip chip--lg">SQL</span>
+            </div>
+          </div>
+          <div class="bento__item bento__item--backend card" data-reveal>
+            <div class="bento__head"><span class="bento__idx">B</span><h3>Backend &amp; architecture</h3></div>
+            <div class="chips" data-reveal-group>
+              <span class="chip">.NET</span><span class="chip">ASP.NET Core</span><span class="chip">EF Core</span><span class="chip">Clean Architecture</span><span class="chip">REST APIs</span><span class="chip">Multi-tenant SaaS</span><span class="chip">RBAC</span><span class="chip">Bounded worker pools</span><span class="chip">SignalR</span><span class="chip">Hangfire</span><span class="chip">Idempotent webhooks (Stripe)</span><span class="chip">WPF (MVVM)</span><span class="chip">Socket programming</span>
+            </div>
+          </div>
+          <div class="bento__item bento__item--front card" data-reveal>
+            <div class="bento__head"><span class="bento__idx">C</span><h3>Frontend</h3></div>
+            <div class="chips" data-reveal-group>
+              <span class="chip">Next.js</span><span class="chip">React</span><span class="chip">TypeScript</span><span class="chip">Tailwind CSS</span><span class="chip">State management</span><span class="chip">Responsive web UI</span>
+            </div>
+          </div>
+          <div class="bento__item bento__item--cloud card" data-reveal>
+            <div class="bento__head"><span class="bento__idx">D</span><h3>Data, cloud &amp; DevOps</h3></div>
+            <div class="chips" data-reveal-group>
+              <span class="chip">PostgreSQL</span><span class="chip">Redis</span><span class="chip">MS SQL Server</span><span class="chip">MySQL</span><span class="chip">AWS EC2</span><span class="chip">AWS RDS</span><span class="chip">AWS S3</span><span class="chip">AWS SES</span><span class="chip">AWS Lambda</span><span class="chip">Docker</span><span class="chip">Nginx</span><span class="chip">GitHub Actions (CI/CD)</span><span class="chip">Automated integration testing</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ COMPETITIVE PROGRAMMING ============ -->
+    <section class="section cp" id="cp">
+      <span class="section__ghost" data-parallax aria-hidden="true">05</span>
+      <div class="container">
+        <div class="section__head">
+          <div class="section__label" data-reveal><span class="section__index">05</span>Competitive programming</div>
+          <h2 class="section__title" data-split>Sharpened on <em>hard problems</em>.</h2>
+        </div>
+
+        <div class="cp__grid">
+          <div class="cp__hero card" data-reveal>
+            <div class="cp__hero-top">
+              <div>
+                <div class="cp__label">Codeforces</div>
+                <div class="cp__rank" id="cfRank"><span class="cp__rank-dot"></span>Expert</div>
+              </div>
+              <a class="cp__handle" href="https://codeforces.com/profile/Moshiur_" target="_blank" rel="noopener">@Moshiur_
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7"/><path d="M8 7h9v9"/></svg>
+              </a>
+            </div>
+            <div class="cp__numbers">
+              <div><span class="cp__big" id="cfPeak" data-count="1864">0</span><span class="cp__small">Peak rating</span></div>
+              <div><span class="cp__big" id="cfCurrent">1617</span><span class="cp__small">Current rating</span></div>
+              <div><span class="cp__big" data-count="1900" data-suffix="+">0</span><span class="cp__small">Problems solved</span></div>
+            </div>
+            <div class="cp__spark-wrap">
+              <svg class="cp__spark" id="cfSpark" viewBox="0 0 600 160" preserveAspectRatio="none" aria-hidden="true"></svg>
+            </div>
+            <div class="cp__spark-foot">
+              <span id="cfContests">Rating history</span>
+              <span id="cfLive">Live from the Codeforces API</span>
+            </div>
+          </div>
+
+          <div class="cp__profiles card" data-reveal>
+            <div class="cp__card-title">Profiles</div>
+            <ul class="profiles">
+              <li><a href="https://codeforces.com/profile/Moshiur_" target="_blank" rel="noopener"><span class="profiles__name">Codeforces</span><span class="profiles__meta">Expert · peak 1864</span><i class="profiles__arrow"></i></a></li>
+              <li><a href="https://www.hackerrank.com/Moshiur_" target="_blank" rel="noopener"><span class="profiles__name">HackerRank</span><span class="profiles__meta">Max rating 1951</span><i class="profiles__arrow"></i></a></li>
+              <li><a href="https://lightoj.com/user/moshiur_cse15" target="_blank" rel="noopener"><span class="profiles__name">LightOJ</span><span class="profiles__meta">180+ solved</span><i class="profiles__arrow"></i></a></li>
+              <li><a href="https://uhunt.onlinejudge.org/id/339994" target="_blank" rel="noopener"><span class="profiles__name">UVa Online Judge</span><span class="profiles__meta">300+ solved</span><i class="profiles__arrow"></i></a></li>
+              <li><a href="https://toph.co/u/moshiur_cse15/problems" target="_blank" rel="noopener"><span class="profiles__name">Toph</span><span class="profiles__meta">Authored problem archive</span><i class="profiles__arrow"></i></a></li>
+            </ul>
+          </div>
+
+          <div class="cp__contests card" data-reveal>
+            <div class="cp__card-title">Contest placements</div>
+            <ul class="ranks" data-reveal-group>
+              <li><span class="ranks__pos ranks__pos--gold">#2</span><span class="ranks__name">VU CSE Tech Fest 2019</span></li>
+              <li><span class="ranks__pos">#9</span><span class="ranks__name">DUET IUPC 2019</span></li>
+              <li><span class="ranks__pos">#11</span><span class="ranks__name">IUT ICT Fest 2019</span></li>
+              <li><span class="ranks__pos">#15</span><span class="ranks__name">First LU IUPC 2018</span></li>
+              <li><span class="ranks__pos">#16</span><span class="ranks__name">BUET CSE Fest 2019</span></li>
+              <li><span class="ranks__pos">#20</span><span class="ranks__name">MIST NCPC 2020</span></li>
+            </ul>
+          </div>
+
+          <div class="cp__judge card" data-reveal>
+            <div class="cp__card-title">Setting, judging &amp; mentoring</div>
+            <ul class="judge" data-reveal-group>
+              <li><span class="judge__role">Judge</span><span class="judge__name">National High School Programming Contest 2020</span></li>
+              <li><span class="judge__role">Judge</span><span class="judge__name">National Girls' Programming Contest 2019</span></li>
+              <li><span class="judge__role">Judge</span><span class="judge__name">Ada Lovelace National Girls' Programming Contest 2019</span></li>
+              <li><span class="judge__role">Setter</span><span class="judge__name">Original problem sets and edge-case test suites for national collegiate contests</span></li>
+              <li><span class="judge__role">Mentor</span><span class="judge__name">RUET Analytical Programming Lab</span></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ CONTACT ============ -->
+    <section class="section contact" id="contact">
+      <span class="section__ghost" data-parallax aria-hidden="true">06</span>
+      <div class="container">
+        <div class="section__head section__head--center">
+          <div class="section__label" data-reveal><span class="section__index">06</span>Contact</div>
+          <h2 class="section__title" data-split>Let's build something that <em>holds up</em> in production.</h2>
+          <p class="contact__lead" data-reveal>Open to senior backend and full-stack roles, tricky systems problems, and good conversations about architecture.</p>
+        </div>
+
+        <div class="contact__email-wrap" data-reveal>
+          <a class="contact__email" href="mailto:moshi.rahman066@gmail.com" data-magnetic>moshi.rahman066@<wbr>gmail.com</a>
+          <button class="copy" id="copyEmail" type="button" data-email="moshi.rahman066@gmail.com" aria-label="Copy email address">
+            <svg class="copy__icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+            <span class="copy__text">Copy</span>
+          </button>
+        </div>
+
+        <div class="contact__links" data-reveal-group>
+          <a class="pill" href="https://linkedin.com/in/moshi066" target="_blank" rel="noopener">LinkedIn</a>
+          <a class="pill" href="https://github.com/moshi066" target="_blank" rel="noopener">GitHub</a>
+          <a class="pill" href="https://codeforces.com/profile/Moshiur_" target="_blank" rel="noopener">Codeforces</a>
+          <a class="pill" href="tel:+8801701021612">+880 1701 021612</a>
+        </div>
+
+        <div class="contact__meta" data-reveal>
+          <span><span class="pulse pulse--sm" aria-hidden="true"></span>Usually replies within 24 hours</span>
+          <span>Dhaka, Bangladesh · <span id="localTime">--:--</span> local time</span>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer__inner">
+      <div class="footer__left">
+        <span class="footer__logo">MR<span class="dot">.</span></span>
+        <span>© <span id="year">2026</span> Md Moshiur Rahman</span>
+      </div>
+      <div class="footer__mid">Designed and built by hand. HTML, CSS, and a little GSAP.</div>
+      <a href="#top" class="footer__top">Back to top
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 19V5"/><path d="m5 12 7-7 7 7"/></svg>
+      </a>
+    </div>
+  </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script src="https://unpkg.com/lenis@1.1.18/dist/lenis.min.js"></script>
+  <script src="assets/js/script.js"></script>
+</body>
+</html>
